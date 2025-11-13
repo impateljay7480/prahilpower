@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>
+      Our Products - Electrical Equipment & Power Solutions | Prahil Power
+    </title>
+    <meta
+      name="description"
+      content="Browse Prahil Power's comprehensive range of electrical products including transformers, switchgear, power distribution equipment, and industrial control systems. Quality products with expert support."
+    />
+    <meta
+      name="keywords"
+      content="transformers, switchgear, electrical panels, power distribution, control systems, circuit breakers, electrical products, industrial equipment"
+    />
+    <meta name="author" content="Prahil Power" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prahilpower.com/products.html" />
+    <meta
+      property="og:title"
+      content="Our Products - Electrical Equipment & Power Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Explore our comprehensive range of electrical and power products designed for reliability and efficiency."
+    />
+    <meta
+      property="og:image"
+      content="https://prahilpower.com/images/products-og.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://prahilpower.com/products.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Our Products - Electrical Equipment & Power Solutions"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Schema.org Markup for Products -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Prahil Power Electrical Products",
+        "description": "Comprehensive range of electrical and power solutions",
+        "itemListElement": [
+          {
+            "@type": "Product",
+            "position": 1,
+            "name": "Distribution Transformer",
+            "description": "High-efficiency distribution transformers for power distribution networks",
+            "category": "Transformers",
+            "brand": {
+              "@type": "Brand",
+              "name": "Prahil Power"
+            }
+          },
+          {
+            "@type": "Product",
+            "position": 2,
+            "name": "Medium Voltage Switchgear",
+            "description": "Reliable switchgear solutions for medium voltage applications",
+            "category": "Switchgear & Control Panels",
+            "brand": {
+              "@type": "Brand",
+              "name": "Prahil Power"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ===================================
+       HEADER & NAVIGATION
+       =================================== -->
+    <header class="header" role="banner">
+      <nav class="nav-container" role="navigation" aria-label="Main navigation">
+        <!-- Logo Placeholder - Replace with actual logo image -->
+        <a href="index.html" class="logo-placeholder">
+          <!-- INSERT LOGO HERE -->
+          <!-- <img src="images/logo.png" alt="Prahil Power Logo" width="300" height="80"> -->
+          LOGO PLACEHOLDER
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          id="navToggle"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===================================
+       PAGE HEADER
+       =================================== -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Our Products</h1>
+        <p>
+          Explore our comprehensive range of electrical and power solutions
+          engineered for excellence and reliability
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================
+       PRODUCTS SECTION
+       =================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="products-layout">
+          <!-- Category Sidebar (Desktop) -->
+          <aside
+            class="category-sidebar"
+            role="navigation"
+            aria-label="Product categories"
+          >
+            <h3>Categories</h3>
+            <ul class="category-list">
+              <!-- Category 1: Transformers -->
+              <li class="category-item active">
+                <div class="category-header" data-category="transformers">
+                  <span>Transformers</span>
+                  <i
+                    class="fas fa-chevron-right category-toggle"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <ul class="subcategory-list">
+                  <li>
+                    <a
+                      href="#"
+                      class="subcategory-link"
+                      data-filter="distribution-transformers"
+                      >Distribution Transformers</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="subcategory-link"
+                      data-filter="power-transformers"
+                      >Power Transformers</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="subcategory-link"
+                      data-filter="isolation-transformers"
+                      >Isolation Transformers</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Category 2: Switchgear & Control Panels -->
+              <li class="category-item">
+                <div class="category-header" data-category="switchgear">
+                  <span>Switchgear & Control Panels</span>
+                  <i
+                    class="fas fa-chevron-right category-toggle"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <ul class="subcategory-list">
+                  <li>
+                    <a
+                      href="#"
+                      class="subcategory-link"
+                      data-filter="mv-switchgear"
+                      >Medium Voltage Switchgear</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="subcategory-link" data-filter="lv-panels"
+                      >Low Voltage Panels</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="subcategory-link"
+                      data-filter="control-panels"
+                      >Control Panels</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Category 3: Power Distribution Equipment -->
+              <li class="category-item">
+                <div class="category-header" data-category="distribution">
+                  <span>Power Distribution Equipment</span>
+                  <i
+                    class="fas fa-chevron-right category-toggle"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <ul class="subcategory-list">
+                  <li>
+                    <a
+                      href="#"
+                      class="subcategory-link"
+                      data-filter="circuit-breakers"
+                      >Circuit Breakers</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="subcategory-link" data-filter="bus-duct"
+                      >Bus Duct Systems</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="subcategory-link"
+                      data-filter="protection-relays"
+                      >Protection Relays</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Mobile Category Dropdown -->
+          <select
+            class="category-dropdown"
+            id="categoryDropdown"
+            aria-label="Select product category"
+          >
+            <option value="all">All Categories</option>
+            <optgroup label="Transformers">
+              <option value="distribution-transformers">
+                Distribution Transformers
+              </option>
+              <option value="power-transformers">Power Transformers</option>
+              <option value="isolation-transformers">
+                Isolation Transformers
+              </option>
+            </optgroup>
+            <optgroup label="Switchgear & Control Panels">
+              <option value="mv-switchgear">Medium Voltage Switchgear</option>
+              <option value="lv-panels">Low Voltage Panels</option>
+              <option value="control-panels">Control Panels</option>
+            </optgroup>
+            <optgroup label="Power Distribution Equipment">
+              <option value="circuit-breakers">Circuit Breakers</option>
+              <option value="bus-duct">Bus Duct Systems</option>
+              <option value="protection-relays">Protection Relays</option>
+            </optgroup>
+          </select>
+
+          <!-- Product Grid -->
+          <main class="product-grid" id="productGrid">
+            <!-- Product 1: Distribution Transformer -->
+            <article
+              class="product-card"
+              data-category="distribution-transformers transformers"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Distribution+Transformer"
+                  alt="Distribution Transformer - High efficiency power distribution"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Distribution Transformer</h3>
+                <p class="product-description">
+                  High-efficiency oil-immersed distribution transformers
+                  designed for reliable power distribution in industrial and
+                  commercial applications. Available in various capacity ratings
+                  for flexible deployment.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 2: Power Transformer -->
+            <article
+              class="product-card"
+              data-category="power-transformers transformers"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Power+Transformer"
+                  alt="Power Transformer - Industrial grade equipment"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Power Transformer</h3>
+                <p class="product-description">
+                  Heavy-duty power transformers for step-up and step-down
+                  applications in power generation and transmission networks.
+                  Built to withstand harsh operating conditions and heavy loads.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 3: Isolation Transformer -->
+            <article
+              class="product-card"
+              data-category="isolation-transformers transformers"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Isolation+Transformer"
+                  alt="Isolation Transformer - Electrical isolation solution"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Isolation Transformer</h3>
+                <p class="product-description">
+                  Premium isolation transformers providing electrical isolation
+                  between primary and secondary circuits. Essential for
+                  sensitive electronic equipment protection and safety-critical
+                  applications.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 4: Medium Voltage Switchgear -->
+            <article
+              class="product-card"
+              data-category="mv-switchgear switchgear"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=MV+Switchgear"
+                  alt="Medium Voltage Switchgear - Reliable switching solution"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Medium Voltage Switchgear</h3>
+                <p class="product-description">
+                  Robust medium voltage switchgear systems (11kV to 33kV) with
+                  advanced protection features. Ideal for industrial facilities,
+                  power substations, and critical infrastructure applications.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 5: Low Voltage Panel -->
+            <article class="product-card" data-category="lv-panels switchgear">
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=LV+Panel"
+                  alt="Low Voltage Panel - Power distribution panel"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Low Voltage Distribution Panel</h3>
+                <p class="product-description">
+                  Customizable low voltage distribution panels with modular
+                  design. Features intelligent protection systems and energy
+                  monitoring capabilities for efficient power management.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 6: Control Panel -->
+            <article
+              class="product-card"
+              data-category="control-panels switchgear"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Control+Panel"
+                  alt="Control Panel - Industrial automation panel"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Industrial Control Panel</h3>
+                <p class="product-description">
+                  Advanced PLC-based control panels for industrial automation.
+                  Features touch-screen HMI, remote monitoring, and
+                  comprehensive safety interlocks for reliable operation.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 7: Circuit Breaker -->
+            <article
+              class="product-card"
+              data-category="circuit-breakers distribution"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Circuit+Breaker"
+                  alt="Circuit Breaker - Overcurrent protection device"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Molded Case Circuit Breaker</h3>
+                <p class="product-description">
+                  High-performance MCCBs with adjustable trip settings. Suitable
+                  for overcurrent and short-circuit protection in commercial and
+                  industrial installations with precision control.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 8: Air Circuit Breaker -->
+            <article
+              class="product-card"
+              data-category="circuit-breakers distribution"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Air+Circuit+Breaker"
+                  alt="Air Circuit Breaker - Heavy duty protection"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Air Circuit Breaker (ACB)</h3>
+                <p class="product-description">
+                  Intelligent air circuit breakers with microprocessor-based
+                  trip units and communication interfaces. Offers comprehensive
+                  protection functions and data logging capabilities.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 9: Bus Duct System -->
+            <article class="product-card" data-category="bus-duct distribution">
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Bus+Duct"
+                  alt="Bus Duct System - Power transmission solution"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Bus Duct System</h3>
+                <p class="product-description">
+                  Efficient busbar trunking systems for power transmission with
+                  low losses and high current carrying capacity. Offers flexible
+                  installation options for modern infrastructure.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 10: Digital Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Protection+Relay"
+                  alt="Digital Protection Relay - Intelligent protection system"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Digital Protection Relay</h3>
+                <p class="product-description">
+                  Microprocessor-based protection relays with multiple
+                  protection functions and event recording. Features
+                  communication protocols for integration with modern substation
+                  systems.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 11: Motor Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Motor+Protection"
+                  alt="Motor Protection Relay - Motor safety device"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Motor Protection Relay</h3>
+                <p class="product-description">
+                  Specialized motor protection relays featuring thermal
+                  overload, phase imbalance, and locked rotor protection.
+                  Includes adjustable parameters for various motor
+                  specifications.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+
+            <!-- Product 12: Differential Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image">
+                <img
+                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Differential+Relay"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  High-speed differential protection relays for transformers,
+                  generators, and motors. Features percentage biased
+                  characteristics and harmonic restraint for superior
+                  protection.
+                </p>
+                <a href="#" class="view-details" role="button">View Details</a>
+              </div>
+            </article>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================
+       FOOTER
+       =================================== -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <h4>Prahil Power Enterprise</h4>
+            <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6">
+              Leading electrical engineering product sourcing, consulting &
+              services solution provider. PAN India operations with commitment
+              to excellence, innovation, and customer satisfaction since 2023.
+              Located in Ahmedabad, Gujarat.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="index.html#why-us">Why Choose Us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="footer-section">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+              <a
+                href="https://facebook.com"
+                class="social-icon"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                class="social-icon"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://linkedin.com"
+                class="social-icon"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Prahil Power. All rights reserved. | Designed with
+            excellence and innovation.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================================
+       JAVASCRIPT
+       =================================== -->
+    <script>
+      // Mobile Navigation Toggle
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      navToggle.addEventListener("click", () => {
+        const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", !isExpanded);
+        navMenu.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Desktop Category Toggle
+      const categoryHeaders = document.querySelectorAll(".category-header");
+      categoryHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const parentItem = header.parentElement;
+          parentItem.classList.toggle("active");
+        });
+      });
+
+      // Product Filtering
+      const subcategoryLinks = document.querySelectorAll(".subcategory-link");
+      const productCards = document.querySelectorAll(".product-card");
+      const categoryDropdown = document.getElementById("categoryDropdown");
+
+      // Desktop subcategory filtering
+      subcategoryLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // Remove active class from all links
+          subcategoryLinks.forEach((l) => l.classList.remove("active"));
+
+          // Add active class to clicked link
+          link.classList.add("active");
+
+          const filter = link.getAttribute("data-filter");
+          filterProducts(filter);
+        });
+      });
+
+      // Mobile dropdown filtering
+      categoryDropdown.addEventListener("change", (e) => {
+        const filter = e.target.value;
+        filterProducts(filter);
+      });
+
+      // Filter function
+      function filterProducts(filter) {
+        productCards.forEach((card) => {
+          if (filter === "all") {
+            card.style.display = "block";
+            setTimeout(() => (card.style.opacity = "1"), 10);
+          } else {
+            const categories = card.getAttribute("data-category");
+            if (categories.includes(filter)) {
+              card.style.display = "block";
+              setTimeout(() => (card.style.opacity = "1"), 10);
+            } else {
+              card.style.opacity = "0";
+              setTimeout(() => (card.style.display = "none"), 300);
+            }
+          }
+        });
+
+        // Scroll to product grid on mobile
+        if (window.innerWidth < 768) {
+          document.getElementById("productGrid").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+
+      // Header scroll effect
+      const header = document.querySelector(".header");
+      let lastScroll = 0;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+          header.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+        } else {
+          header.style.boxShadow = "0 1px 2px 0 rgba(0, 0, 0, 0.05)";
+        }
+
+        lastScroll = currentScroll;
+      });
+
+      // Lazy loading for images
+      if ("IntersectionObserver" in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.classList.add("loaded");
+                observer.unobserve(img);
+              }
+            }
+          });
+        });
+
+        document.querySelectorAll("img[data-src]").forEach((img) => {
+          imageObserver.observe(img);
+        });
+      }
+
+      // View Details button handling
+      const viewDetailsButtons = document.querySelectorAll(".view-details");
+      viewDetailsButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const productName = button
+            .closest(".product-card")
+            .querySelector("h3").textContent;
+          const contactInfo = `For detailed information about "${productName}", please contact us:\n\nEmail: prahilpower@gmail.com\nPhone: 097243 12187 / 097252 94187\n\nWe're here to assist you with specifications, pricing, and project requirements.`;
+          alert(contactInfo);
+        });
+      });
+
+      // Add fade-in animation on scroll for product cards
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "0";
+            entry.target.style.transform = "translateY(20px)";
+
+            setTimeout(() => {
+              entry.target.style.transition = "all 0.5s ease";
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }, 100);
+
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all product cards for animation
+      productCards.forEach((card) => {
+        cardObserver.observe(card);
+      });
+    </script>
+  </body>
+</html>
