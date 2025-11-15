@@ -110,12 +110,10 @@
        =================================== -->
     <header class="header" role="banner">
       <nav class="nav-container" role="navigation" aria-label="Main navigation">
-        <!-- Logo Placeholder - Replace with actual logo image -->
-        <a href="index.html" class="logo-placeholder">
-          <!-- INSERT LOGO HERE -->
-          <!-- <img src="images/logo.png" alt="Prahil Power Logo" width="300" height="80"> -->
-          LOGO PLACEHOLDER
-        </a>
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/logo.svg" alt="Prahil Power Enterprise Logo" />
+        </div>
 
         <!-- Mobile Menu Toggle -->
         <button
@@ -307,22 +305,33 @@
               class="product-card"
               data-category="distribution-transformers transformers"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Distribution+Transformer"
+                  src="images/products/jaw-contacts.jpg"
                   alt="Distribution Transformer - High efficiency power distribution"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
-                <h3>Distribution Transformer</h3>
+                <h3>Jaw Contacts</h3>
                 <p class="product-description">
-                  High-efficiency oil-immersed distribution transformers
-                  designed for reliable power distribution in industrial and
-                  commercial applications. Available in various capacity ratings
-                  for flexible deployment.
+                  <span class="short-text"
+                    >High-efficiency oil-immersed distribution transformers
+                    designed for reliable power distribution...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-efficiency oil-immersed distribution transformers
+                    designed for reliable power distribution in industrial and
+                    commercial applications. Available in various capacity
+                    ratings for flexible deployment.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -331,21 +340,33 @@
               class="product-card"
               data-category="power-transformers transformers"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Power+Transformer"
+                  src="images/products/aux-switch.jpeg"
                   alt="Power Transformer - Industrial grade equipment"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Power Transformer</h3>
                 <p class="product-description">
-                  Heavy-duty power transformers for step-up and step-down
-                  applications in power generation and transmission networks.
-                  Built to withstand harsh operating conditions and heavy loads.
+                  <span class="short-text"
+                    >Heavy-duty power transformers for step-up and step-down
+                    applications...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Heavy-duty power transformers for step-up and step-down
+                    applications in power generation and transmission networks.
+                    Built to withstand harsh operating conditions and heavy
+                    loads.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -354,22 +375,33 @@
               class="product-card"
               data-category="isolation-transformers transformers"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Isolation+Transformer"
+                  src="images/products/dampers.jpg"
                   alt="Isolation Transformer - Electrical isolation solution"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Isolation Transformer</h3>
                 <p class="product-description">
-                  Premium isolation transformers providing electrical isolation
-                  between primary and secondary circuits. Essential for
-                  sensitive electronic equipment protection and safety-critical
-                  applications.
+                  <span class="short-text"
+                    >Premium isolation transformers providing electrical
+                    isolation between primary and secondary circuits...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Premium isolation transformers providing electrical
+                    isolation between primary and secondary circuits. Essential
+                    for sensitive electronic equipment protection and
+                    safety-critical applications.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -378,41 +410,65 @@
               class="product-card"
               data-category="mv-switchgear switchgear"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=MV+Switchgear"
+                  src="images/products/finger-contact-fuse-clips.jpg"
                   alt="Medium Voltage Switchgear - Reliable switching solution"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Medium Voltage Switchgear</h3>
                 <p class="product-description">
-                  Robust medium voltage switchgear systems (11kV to 33kV) with
-                  advanced protection features. Ideal for industrial facilities,
-                  power substations, and critical infrastructure applications.
+                  <span class="short-text"
+                    >Robust medium voltage switchgear systems (11kV to 33kV)
+                    with advanced protection features...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Robust medium voltage switchgear systems (11kV to 33kV)
+                    with advanced protection features. Ideal for industrial
+                    facilities, power substations, and critical infrastructure
+                    applications.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
             <!-- Product 5: Low Voltage Panel -->
             <article class="product-card" data-category="lv-panels switchgear">
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=LV+Panel"
+                  src="images/products/flower-contacts.jpg"
                   alt="Low Voltage Panel - Power distribution panel"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Low Voltage Distribution Panel</h3>
                 <p class="product-description">
-                  Customizable low voltage distribution panels with modular
-                  design. Features intelligent protection systems and energy
-                  monitoring capabilities for efficient power management.
+                  <span class="short-text"
+                    >Customizable low voltage distribution panels with modular
+                    design...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Customizable low voltage distribution panels with modular
+                    design. Features intelligent protection systems and energy
+                    monitoring capabilities for efficient power
+                    management.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -421,21 +477,33 @@
               class="product-card"
               data-category="control-panels switchgear"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Control+Panel"
+                  src="images/products/metroark-silicone-17-compound.webp"
                   alt="Control Panel - Industrial automation panel"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Industrial Control Panel</h3>
                 <p class="product-description">
-                  Advanced PLC-based control panels for industrial automation.
-                  Features touch-screen HMI, remote monitoring, and
-                  comprehensive safety interlocks for reliable operation.
+                  <span class="short-text"
+                    >Advanced PLC-based control panels for industrial
+                    automation...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Advanced PLC-based control panels for industrial
+                    automation. Features touch-screen HMI, remote monitoring,
+                    and comprehensive safety interlocks for reliable
+                    operation.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -444,21 +512,33 @@
               class="product-card"
               data-category="circuit-breakers distribution"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Circuit+Breaker"
+                  src="images/products/molykote-br-2-plus-high-performance-grease-nlgi-2-black-1kg-tin.jpg"
                   alt="Circuit Breaker - Overcurrent protection device"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Molded Case Circuit Breaker</h3>
                 <p class="product-description">
-                  High-performance MCCBs with adjustable trip settings. Suitable
-                  for overcurrent and short-circuit protection in commercial and
-                  industrial installations with precision control.
+                  <span class="short-text"
+                    >High-performance MCCBs with adjustable trip
+                    settings...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-performance MCCBs with adjustable trip settings.
+                    Suitable for overcurrent and short-circuit protection in
+                    commercial and industrial installations with precision
+                    control.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -467,41 +547,65 @@
               class="product-card"
               data-category="circuit-breakers distribution"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Air+Circuit+Breaker"
+                  src="images/products/solenoid-coils.jpg"
                   alt="Air Circuit Breaker - Heavy duty protection"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Air Circuit Breaker (ACB)</h3>
                 <p class="product-description">
-                  Intelligent air circuit breakers with microprocessor-based
-                  trip units and communication interfaces. Offers comprehensive
-                  protection functions and data logging capabilities.
+                  <span class="short-text"
+                    >Intelligent air circuit breakers with microprocessor-based
+                    trip units...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Intelligent air circuit breakers with microprocessor-based
+                    trip units and communication interfaces. Offers
+                    comprehensive protection functions and data logging
+                    capabilities.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
             <!-- Product 9: Bus Duct System -->
             <article class="product-card" data-category="bus-duct distribution">
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Bus+Duct"
+                  src="images/products/tulip-contacts.jpg"
                   alt="Bus Duct System - Power transmission solution"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Bus Duct System</h3>
                 <p class="product-description">
-                  Efficient busbar trunking systems for power transmission with
-                  low losses and high current carrying capacity. Offers flexible
-                  installation options for modern infrastructure.
+                  <span class="short-text"
+                    >Efficient busbar trunking systems for power
+                    transmission...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Efficient busbar trunking systems for power transmission
+                    with low losses and high current carrying capacity. Offers
+                    flexible installation options for modern
+                    infrastructure.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -510,22 +614,33 @@
               class="product-card"
               data-category="protection-relays distribution"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Protection+Relay"
+                  src="images/products/window-alarm-annunciator-500x500.webp"
                   alt="Digital Protection Relay - Intelligent protection system"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Digital Protection Relay</h3>
                 <p class="product-description">
-                  Microprocessor-based protection relays with multiple
-                  protection functions and event recording. Features
-                  communication protocols for integration with modern substation
-                  systems.
+                  <span class="short-text"
+                    >Microprocessor-based protection relays with multiple
+                    protection functions...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Microprocessor-based protection relays with multiple
+                    protection functions and event recording. Features
+                    communication protocols for integration with modern
+                    substation systems.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -534,22 +649,33 @@
               class="product-card"
               data-category="protection-relays distribution"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Motor+Protection"
+                  src="images/products/13-window-alarm-annunciator-500x500.webp"
                   alt="Motor Protection Relay - Motor safety device"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Motor Protection Relay</h3>
                 <p class="product-description">
-                  Specialized motor protection relays featuring thermal
-                  overload, phase imbalance, and locked rotor protection.
-                  Includes adjustable parameters for various motor
-                  specifications.
+                  <span class="short-text"
+                    >Specialized motor protection relays featuring thermal
+                    overload, phase imbalance...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >Specialized motor protection relays featuring thermal
+                    overload, phase imbalance, and locked rotor protection.
+                    Includes adjustable parameters for various motor
+                    specifications.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
 
@@ -558,22 +684,208 @@
               class="product-card"
               data-category="protection-relays distribution"
             >
-              <div class="product-image">
+              <div class="product-image" data-enlarge>
                 <img
-                  src="https://via.placeholder.com/250x200/2563eb/ffffff?text=Differential+Relay"
+                  src="images/products/34402-MOLYKOTE-BR-2-PLUS-5KG.jpg"
                   alt="Differential Protection Relay - Advanced protection"
                   loading="lazy"
                 />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Differential Protection Relay</h3>
                 <p class="product-description">
-                  High-speed differential protection relays for transformers,
-                  generators, and motors. Features percentage biased
-                  characteristics and harmonic restraint for superior
-                  protection.
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
                 </p>
-                <a href="#" class="view-details" role="button">View Details</a>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 13: Differential Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/auxiliary-switch-screw-type-alternate-500x500.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 14: Differential Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/shunt-trip-coil-500x500.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 15: Differential Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/solenoid-assembly-coil-500x500.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 16: Differential Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/trip-solenoid-coil-500x500.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 17: Differential Protection Relay -->
+            <article
+              class="product-card"
+              data-category="protection-relays distribution"
+            >
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/wacker-metroark-silicone-17-compound-1000x1000.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
             </article>
           </main>
@@ -586,73 +898,140 @@
        =================================== -->
     <footer class="footer" role="contentinfo">
       <div class="container">
-        <div class="footer-content">
-          <!-- Company Info -->
-          <div class="footer-section">
-            <h4>Prahil Power Enterprise</h4>
-            <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6">
-              Leading electrical engineering product sourcing, consulting &
-              services solution provider. PAN India operations with commitment
-              to excellence, innovation, and customer satisfaction since 2023.
-              Located in Ahmedabad, Gujarat.
-            </p>
-          </div>
+        <!-- Footer Main Content -->
+        <div class="footer-main">
+          <div class="footer-grid">
+            <!-- Company Info Section -->
+            <div class="footer-col footer-brand">
+              <div class="footer-logo-wrapper">
+                <img
+                  src="images/logo.svg"
+                  alt="Prahil Power Enterprise Logo"
+                  class="footer-brand-logo"
+                />
+              </div>
+              <p class="footer-tagline">
+                Empowering India's Power Sector with Excellence
+              </p>
+              <p class="footer-desc">
+                Leading electrical engineering product sourcing, consulting &
+                services provider. PAN India operations since 2023.
+              </p>
+            </div>
 
-          <!-- Quick Links -->
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html#about">About Us</a></li>
-              <li><a href="index.html#why-us">Why Choose Us</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-          </div>
+            <!-- Quick Links Section -->
+            <div class="footer-col">
+              <h4 class="footer-col-title">Quick Links</h4>
+              <ul class="footer-menu">
+                <li>
+                  <a href="index.html"
+                    ><i class="fas fa-chevron-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#about"
+                    ><i class="fas fa-chevron-right"></i> About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#why-us"
+                    ><i class="fas fa-chevron-right"></i> Why Choose Us</a
+                  >
+                </li>
+                <li>
+                  <a href="products.html"
+                    ><i class="fas fa-chevron-right"></i> Our Products</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#contact"
+                    ><i class="fas fa-chevron-right"></i> Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
 
-          <!-- Social Media -->
-          <div class="footer-section">
-            <h4>Connect With Us</h4>
-            <div class="social-links">
-              <a
-                href="https://facebook.com"
-                class="social-icon"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://instagram.com"
-                class="social-icon"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://linkedin.com"
-                class="social-icon"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-              </a>
+            <!-- Connect Section -->
+            <div class="footer-col">
+              <h4 class="footer-col-title">Stay Connected</h4>
+              <p class="footer-connect-text">
+                Follow us on social media for latest updates, industry insights,
+                and innovative solutions.
+              </p>
+
+              <!-- Social Media Links -->
+              <div class="footer-social">
+                <a
+                  href="https://facebook.com"
+                  class="footer-social-btn"
+                  aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  class="footer-social-btn"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/prahil-power-enterprise"
+                  class="footer-social-btn"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://twitter.com"
+                  class="footer-social-btn"
+                  aria-label="Twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
-          <p>
-            &copy; 2025 Prahil Power. All rights reserved. | Designed with
-            excellence and innovation.
-          </p>
+          <div class="footer-bottom-wrapper">
+            <div class="footer-copyright">
+              <p>
+                &copy; 2025 <strong>Prahil Power Enterprise</strong>. All Rights
+                Reserved.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div
+      id="imageModal"
+      class="image-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalImage"
+    >
+      <span class="image-modal-close" aria-label="Close modal">&times;</span>
+      <img
+        class="image-modal-content"
+        id="modalImage"
+        alt="Enlarged product image"
+      />
+      <div class="image-modal-caption" id="imageCaption"></div>
+    </div>
 
     <!-- ===================================
        JAVASCRIPT
@@ -787,6 +1166,74 @@
           const contactInfo = `For detailed information about "${productName}", please contact us:\n\nEmail: prahilpower@gmail.com\nPhone: 097243 12187 / 097252 94187\n\nWe're here to assist you with specifications, pricing, and project requirements.`;
           alert(contactInfo);
         });
+      });
+
+      // Read More / Read Less Functionality
+      const readMoreButtons = document.querySelectorAll(".read-more-btn");
+      readMoreButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const productCard = this.closest(".product-card");
+          const shortText = productCard.querySelector(".short-text");
+          const fullText = productCard.querySelector(".full-text");
+          const icon = this.querySelector("i");
+          const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+          if (isExpanded) {
+            // Collapse
+            shortText.style.display = "inline";
+            fullText.style.display = "none";
+            this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+            this.setAttribute("aria-expanded", "false");
+          } else {
+            // Expand
+            shortText.style.display = "none";
+            fullText.style.display = "inline";
+            this.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+            this.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+
+      // Image Enlargement Functionality
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const captionText = document.getElementById("imageCaption");
+      const closeModal = document.querySelector(".image-modal-close");
+
+      // Add click event to all product images
+      document
+        .querySelectorAll(".product-image[data-enlarge]")
+        .forEach((imageContainer) => {
+          imageContainer.style.cursor = "pointer";
+          imageContainer.addEventListener("click", function () {
+            const img = this.querySelector("img");
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+            captionText.textContent = img.alt;
+            document.body.style.overflow = "hidden"; // Prevent background scrolling
+          });
+        });
+
+      // Close modal when clicking the X
+      closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      });
+
+      // Close modal when clicking outside the image
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
       });
 
       // Add fade-in animation on scroll for product cards
