@@ -149,6 +149,92 @@
        HERO SECTION
        =================================== -->
     <section class="hero" id="home">
+      <!-- Animated Background Elements -->
+      <div class="hero-animation">
+        <!-- Electric Circuit Lines -->
+        <svg
+          class="circuit-svg"
+          viewBox="0 0 1200 600"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g class="circuit-lines">
+            <!-- Horizontal Lines -->
+            <line
+              x1="0"
+              y1="150"
+              x2="1200"
+              y2="150"
+              class="circuit-line line-1"
+            />
+            <line
+              x1="0"
+              y1="300"
+              x2="1200"
+              y2="300"
+              class="circuit-line line-2"
+            />
+            <line
+              x1="0"
+              y1="450"
+              x2="1200"
+              y2="450"
+              class="circuit-line line-3"
+            />
+
+            <!-- Vertical Connections -->
+            <line
+              x1="200"
+              y1="150"
+              x2="200"
+              y2="300"
+              class="circuit-line line-4"
+            />
+            <line
+              x1="600"
+              y1="300"
+              x2="600"
+              y2="450"
+              class="circuit-line line-5"
+            />
+            <line
+              x1="1000"
+              y1="150"
+              x2="1000"
+              y2="450"
+              class="circuit-line line-6"
+            />
+
+            <!-- Circuit Nodes -->
+            <circle cx="200" cy="150" r="8" class="circuit-node node-1" />
+            <circle cx="600" cy="300" r="8" class="circuit-node node-2" />
+            <circle cx="1000" cy="450" r="8" class="circuit-node node-3" />
+            <circle cx="400" cy="150" r="6" class="circuit-node node-4" />
+            <circle cx="800" cy="300" r="6" class="circuit-node node-5" />
+          </g>
+
+          <!-- Energy Particles -->
+          <circle cx="0" cy="150" r="4" class="energy-particle particle-1" />
+          <circle cx="0" cy="300" r="4" class="energy-particle particle-2" />
+          <circle cx="0" cy="450" r="4" class="energy-particle particle-3" />
+        </svg>
+
+        <!-- Floating Power Icons -->
+        <div class="floating-icons">
+          <i class="fas fa-bolt floating-icon icon-1"></i>
+          <i class="fas fa-plug floating-icon icon-2"></i>
+          <i class="fas fa-lightbulb floating-icon icon-3"></i>
+          <i class="fas fa-battery-full floating-icon icon-4"></i>
+          <i class="fas fa-solar-panel floating-icon icon-5"></i>
+        </div>
+
+        <!-- Energy Waves -->
+        <div class="energy-waves">
+          <div class="wave wave-1"></div>
+          <div class="wave wave-2"></div>
+          <div class="wave wave-3"></div>
+        </div>
+      </div>
+
       <div class="hero-content">
         <h1>Empowering India's Power Sector</h1>
         <p class="hero-subheading">
@@ -175,7 +261,7 @@
     <!-- ===================================
        OVERVIEW SECTION
        =================================== -->
-    <section class="section overview-section">
+    <section class="section overview-section" id="about">
       <div class="container">
         <h2 class="section-title">About Us</h2>
         <div class="overview-content">
@@ -214,7 +300,7 @@
     <!-- ===================================
        WHO WE ARE SECTION
        =================================== -->
-    <section class="section who-we-are" id="about">
+    <section class="section who-we-are" id="who-we-are">
       <div class="container">
         <h2 class="section-title">Who We Are</h2>
         <p class="section-subtitle">
