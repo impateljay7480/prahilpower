@@ -141,6 +141,8 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
+      <!-- Mobile Navigation Backdrop -->
+      <div class="nav-backdrop" id="navBackdrop"></div>
     </header>
 
     <!-- ===================================
@@ -625,11 +627,24 @@
       // Mobile Navigation Toggle
       const navToggle = document.getElementById("navToggle");
       const navMenu = document.getElementById("navMenu");
+      const navBackdrop = document.getElementById("navBackdrop");
 
       navToggle.addEventListener("click", () => {
         const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
         navToggle.setAttribute("aria-expanded", !isExpanded);
         navMenu.classList.toggle("active");
+        navBackdrop.classList.toggle("active");
+
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = !isExpanded ? "hidden" : "";
+      });
+
+      // Close mobile menu when clicking backdrop
+      navBackdrop.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        navBackdrop.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
       });
 
       // Close mobile menu when clicking on a link
@@ -637,7 +652,9 @@
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {
           navMenu.classList.remove("active");
+          navBackdrop.classList.remove("active");
           navToggle.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
         });
       });
 
