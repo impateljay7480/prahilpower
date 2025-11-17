@@ -3304,3 +3304,417 @@ ol {
     scroll-margin-top: 70px;
   }
 }
+
+/* ===================================
+   NEW PRODUCTS PAGE - SIDEBAR + CAROUSEL DESIGN
+   =================================== */
+
+/* Products Layout */
+.products-layout {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+  min-height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .products-layout {
+    flex-direction: column;
+  }
+}
+
+/* Category Sidebar */
+.category-sidebar {
+  flex: 0 0 280px;
+  background: var(--bg-white);
+  border-radius: 16px;
+  padding: 2rem 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(13, 25, 62, 0.1),
+    0 2px 4px -1px rgba(13, 25, 62, 0.06);
+  height: fit-content;
+  max-height: calc(100vh - 180px);
+  position: sticky;
+  top: 100px;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .category-sidebar {
+    flex: 1;
+    position: static;
+    max-width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  letter-spacing: -0.01em;
+}
+
+/* Category Navigation */
+.category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+/* Category Item */
+.category-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--bg-light);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.category-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gradient-1);
+  transform: scaleY(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-item:hover::before,
+.category-item.active::before {
+  transform: scaleY(1);
+}
+
+.category-item:hover {
+  background: var(--bg-white);
+  border-color: var(--primary-color);
+  transform: translateX(6px);
+  box-shadow: 0 4px 12px rgba(0, 113, 188, 0.15);
+  color: var(--primary-color);
+}
+
+.category-item.active {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 113, 188, 0.1) 0%,
+    rgba(21, 207, 246, 0.1) 100%
+  );
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 113, 188, 0.12);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.category-item span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Products Main Content */
+.products-main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Carousel View */
+.carousel-view {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Carousel Header */
+.carousel-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.carousel-header h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  font-weight: 800;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .carousel-header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 0 3rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 0 2.5rem;
+  }
+}
+
+/* Carousel Track Container */
+.carousel-track-container {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px -10px rgba(13, 25, 62, 0.2);
+  background: var(--bg-light);
+}
+
+/* Carousel Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Carousel Slide */
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+  background: var(--bg-white);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  display: block;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-slide img {
+    height: 350px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide img {
+    height: 280px;
+  }
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: var(--bg-white);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 113, 188, 0.2);
+}
+
+.carousel-nav:hover {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 113, 188, 0.35);
+}
+
+.carousel-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.carousel-nav.prev {
+  left: 0;
+}
+
+.carousel-nav.next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--border-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+.carousel-indicator:hover {
+  background: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.carousel-indicator.active {
+  background: var(--primary-color);
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* Product Description Section */
+.product-description-section {
+  background: var(--bg-white);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(13, 25, 62, 0.1);
+  margin-top: 2.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+@media (max-width: 640px) {
+  .product-description-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.product-description-section h3 {
+  font-size: 1.625rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.product-desc-text {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 900px;
+}
+
+/* Product List Section */
+.product-list-section {
+  margin-top: 0;
+}
+
+.product-list-section h4 {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-bullet-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .product-bullet-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-bullet-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.875rem;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 113, 188, 0.03) 0%,
+    rgba(21, 207, 246, 0.03) 100%
+  );
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 3px solid transparent;
+}
+
+.product-bullet-list li:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 113, 188, 0.08) 0%,
+    rgba(21, 207, 246, 0.08) 100%
+  );
+  border-left-color: var(--primary-color);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 113, 188, 0.1);
+}
+
+.product-bullet-list li::before {
+  content: "⚡";
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: -2px;
+}
+
+.product-bullet-list li span {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Animation for products section */
+.products-section {
+  min-height: 60vh;
+}
