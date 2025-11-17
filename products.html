@@ -1506,6 +1506,24 @@
               </div>
             </article>
           </main>
+
+          <!-- No Results Message -->
+          <div id="noResults" class="no-results" style="display: none">
+            <div class="no-results-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>No Products Found</h3>
+            <p>
+              We couldn't find any products matching your current filter. Please
+              try a different category.
+            </p>
+            <button
+              class="cta-button primary"
+              onclick="document.getElementById('categoryDropdown').value='all'; document.querySelector('.category-header[data-category=all]').click();"
+            >
+              View All Products
+            </button>
+          </div>
         </div>
 
         <!-- Pagination Controls -->
@@ -1772,21 +1790,34 @@
 
       // Filter function
       function filterProducts(filter) {
+        const noResults = document.getElementById("noResults");
+        let visibleCount = 0;
+
         productCards.forEach((card) => {
           if (filter === "all") {
             card.style.display = "block";
             setTimeout(() => (card.style.opacity = "1"), 10);
+            visibleCount++;
           } else {
             const categories = card.getAttribute("data-category");
             if (categories.includes(filter)) {
               card.style.display = "block";
               setTimeout(() => (card.style.opacity = "1"), 10);
+              visibleCount++;
             } else {
               card.style.opacity = "0";
               setTimeout(() => (card.style.display = "none"), 300);
             }
           }
         });
+
+        // Show/hide no results message
+        if (visibleCount === 0) {
+          noResults.style.display = "block";
+          document.getElementById("paginationContainer").style.display = "none";
+        } else {
+          noResults.style.display = "none";
+        }
 
         // Scroll to product grid on mobile
         if (window.innerWidth < 768) {
@@ -1970,6 +2001,7 @@
       function updatePagination() {
         const visibleProducts = getVisibleProducts();
         const totalPages = Math.ceil(visibleProducts.length / itemsPerPage);
+        const noResults = document.getElementById("noResults");
 
         // Update info text
         const startItem = (currentPage - 1) * itemsPerPage + 1;
@@ -1997,6 +2029,16 @@
             setTimeout(() => (card.style.opacity = "1"), 10);
           }
         });
+
+        // Show/hide no results message
+        if (visibleProducts.length === 0) {
+          noResults.style.display = "block";
+          document.getElementById("paginationContainer").style.display = "none";
+        } else {
+          noResults.style.display = "none";
+          document.getElementById("paginationContainer").style.display =
+            "block";
+        }
 
         // Update page numbers
         paginationNumbers.innerHTML = "";
