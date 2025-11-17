@@ -167,81 +167,65 @@
           >
             <h3>Categories</h3>
             <ul class="category-list">
-              <!-- Category 1: Transformers -->
+              <!-- Category 0: All Categories -->
               <li class="category-item active">
-                <div class="category-header" data-category="transformers">
-                  <span>Transformers</span>
+                <div class="category-header" data-category="all">
+                  <span>All Categories</span>
                   <i
                     class="fas fa-chevron-right category-toggle"
                     aria-hidden="true"
                   ></i>
                 </div>
-                <ul class="subcategory-list">
-                  <li>
-                    <a
-                      href="#"
-                      class="subcategory-link"
-                      data-filter="distribution-transformers"
-                      >Distribution Transformers</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="subcategory-link"
-                      data-filter="power-transformers"
-                      >Power Transformers</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="subcategory-link"
-                      data-filter="isolation-transformers"
-                      >Isolation Transformers</a
-                    >
-                  </li>
-                </ul>
               </li>
 
-              <!-- Category 2: Switchgear & Control Panels -->
+              <!-- Category 1: Transformer Spares -->
               <li class="category-item">
-                <div class="category-header" data-category="switchgear">
-                  <span>Switchgear & Control Panels</span>
+                <div class="category-header" data-category="transformers">
+                  <span>Transformer Spares</span>
                   <i
                     class="fas fa-chevron-right category-toggle"
                     aria-hidden="true"
                   ></i>
                 </div>
-                <ul class="subcategory-list">
-                  <li>
-                    <a
-                      href="#"
-                      class="subcategory-link"
-                      data-filter="mv-switchgear"
-                      >Medium Voltage Switchgear</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="subcategory-link" data-filter="lv-panels"
-                      >Low Voltage Panels</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="subcategory-link"
-                      data-filter="control-panels"
-                      >Control Panels</a
-                    >
-                  </li>
-                </ul>
               </li>
 
-              <!-- Category 3: Power Distribution Equipment -->
+              <!-- Category 2: Switchgear Products -->
+              <li class="category-item">
+                <div class="category-header" data-category="switchgearproducts">
+                  <span>Switchgear Products</span>
+                  <i
+                    class="fas fa-chevron-right category-toggle"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </li>
+
+              <!-- Category 3: Obsoleted Products -->
+              <li class="category-item">
+                <div class="category-header" data-category="obsoleted">
+                  <span>Obsoleted Products</span>
+                  <i
+                    class="fas fa-chevron-right category-toggle"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </li>
+
+              <!-- Category 4: Numerical Relays -->
+              <li class="category-item">
+                <div class="category-header" data-category="numericalrelays">
+                  <span>Numerical Relays</span>
+                  <i
+                    class="fas fa-chevron-right category-toggle"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </li>
+
+              <!-- Category 5: MV Switchgear parts -->
               <li class="category-item">
                 <div class="category-header" data-category="distribution">
-                  <span>Power Distribution Equipment</span>
+                  <span>MV Switchgear parts</span>
                   <i
                     class="fas fa-chevron-right category-toggle"
                     aria-hidden="true"
@@ -271,6 +255,17 @@
                   </li>
                 </ul>
               </li>
+
+              <!-- Category 6: GIS Spares And Accessories -->
+              <li class="category-item">
+                <div class="category-header" data-category="gisspares">
+                  <span>GIS Spares And Accessories</span>
+                  <i
+                    class="fas fa-chevron-right category-toggle"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </li>
             </ul>
           </aside>
 
@@ -281,37 +276,25 @@
             aria-label="Select product category"
           >
             <option value="all">All Categories</option>
-            <optgroup label="Transformers">
-              <option value="distribution-transformers">
-                Distribution Transformers
-              </option>
-              <option value="power-transformers">Power Transformers</option>
-              <option value="isolation-transformers">
-                Isolation Transformers
-              </option>
-            </optgroup>
-            <optgroup label="Switchgear & Control Panels">
-              <option value="mv-switchgear">Medium Voltage Switchgear</option>
-              <option value="lv-panels">Low Voltage Panels</option>
-              <option value="control-panels">Control Panels</option>
-            </optgroup>
-            <optgroup label="Power Distribution Equipment">
+            <option value="transformers">Transformer Spares</option>
+            <option value="switchgearproducts">Switchgear Products</option>
+            <option value="obsoleted">Obsoleted Products</option>
+            <option value="numericalrelays">Numerical Relays</option>
+            <optgroup label="MV Switchgear parts">
               <option value="circuit-breakers">Circuit Breakers</option>
               <option value="bus-duct">Bus Duct Systems</option>
               <option value="protection-relays">Protection Relays</option>
             </optgroup>
+            <option value="gisspares">GIS Spares And Accessories</option>
           </select>
 
           <!-- Product Grid -->
           <main class="product-grid" id="productGrid">
             <!-- Product 1: Distribution Transformer -->
-            <article
-              class="product-card"
-              data-category="distribution-transformers transformers"
-            >
+            <article class="product-card" data-category="transformers">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/jaw-contacts.jpg"
+                  src="images/products/transformer spares/spares 5.jpg"
                   alt="Distribution Transformer - High efficiency power distribution"
                   loading="lazy"
                 />
@@ -340,13 +323,10 @@
             </article>
 
             <!-- Product 2: Power Transformer -->
-            <article
-              class="product-card"
-              data-category="power-transformers transformers"
-            >
+            <article class="product-card" data-category="transformers">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/aux-switch.jpeg"
+                  src="images/products/transformer spares/transformer spares 1.jpg"
                   alt="Power Transformer - Industrial grade equipment"
                   loading="lazy"
                 />
@@ -375,13 +355,10 @@
             </article>
 
             <!-- Product 3: Isolation Transformer -->
-            <article
-              class="product-card"
-              data-category="isolation-transformers transformers"
-            >
+            <article class="product-card" data-category="transformers">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/dampers.jpg"
+                  src="images/products/transformer spares/transformer spares 2.png"
                   alt="Isolation Transformer - Electrical isolation solution"
                   loading="lazy"
                 />
@@ -410,13 +387,10 @@
             </article>
 
             <!-- Product 4: Medium Voltage Switchgear -->
-            <article
-              class="product-card"
-              data-category="mv-switchgear switchgear"
-            >
+            <article class="product-card" data-category="transformers">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/finger-contact-fuse-clips.jpg"
+                  src="images/products/transformer spares/transformer spares 4.jpg"
                   alt="Medium Voltage Switchgear - Reliable switching solution"
                   loading="lazy"
                 />
@@ -445,10 +419,10 @@
             </article>
 
             <!-- Product 5: Low Voltage Panel -->
-            <article class="product-card" data-category="lv-panels switchgear">
+            <article class="product-card" data-category="transformers">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/flower-contacts.jpg"
+                  src="images/products/transformer spares/transformer spares 3.jpg"
                   alt="Low Voltage Panel - Power distribution panel"
                   loading="lazy"
                 />
@@ -477,13 +451,10 @@
             </article>
 
             <!-- Product 6: Control Panel -->
-            <article
-              class="product-card"
-              data-category="control-panels switchgear"
-            >
+            <article class="product-card" data-category="transformers">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/metroark-silicone-17-compound.webp"
+                  src="images/products/transformer spares/transformer.jpg"
                   alt="Control Panel - Industrial automation panel"
                   loading="lazy"
                 />
@@ -512,13 +483,10 @@
             </article>
 
             <!-- Product 7: Circuit Breaker -->
-            <article
-              class="product-card"
-              data-category="circuit-breakers distribution"
-            >
+            <article class="product-card" data-category="transformers">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/molykote-br-2-plus-high-performance-grease-nlgi-2-black-1kg-tin.jpg"
+                  src="images/products/transformer spares/transformer2.jpg"
                   alt="Circuit Breaker - Overcurrent protection device"
                   loading="lazy"
                 />
@@ -547,13 +515,10 @@
             </article>
 
             <!-- Product 8: Air Circuit Breaker -->
-            <article
-              class="product-card"
-              data-category="circuit-breakers distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/solenoid-coils.jpg"
+                  src="images/products/switchgear products/contactors.webp"
                   alt="Air Circuit Breaker - Heavy duty protection"
                   loading="lazy"
                 />
@@ -582,10 +547,10 @@
             </article>
 
             <!-- Product 9: Bus Duct System -->
-            <article class="product-card" data-category="bus-duct distribution">
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/tulip-contacts.jpg"
+                  src="images/products/switchgear products/L&T.jpg"
                   alt="Bus Duct System - Power transmission solution"
                   loading="lazy"
                 />
@@ -614,13 +579,10 @@
             </article>
 
             <!-- Product 10: Digital Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/window-alarm-annunciator-500x500.webp"
+                  src="images/products/switchgear products/l-t-exora-rccb.jpg"
                   alt="Digital Protection Relay - Intelligent protection system"
                   loading="lazy"
                 />
@@ -649,13 +611,10 @@
             </article>
 
             <!-- Product 11: Motor Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/13-window-alarm-annunciator-500x500.webp"
+                  src="images/products/switchgear products/l-t-rccb-25amp-4pole-100ma-bc402510-1000x1000.jpg"
                   alt="Motor Protection Relay - Motor safety device"
                   loading="lazy"
                 />
@@ -684,13 +643,10 @@
             </article>
 
             <!-- Product 12: Differential Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/34402-MOLYKOTE-BR-2-PLUS-5KG.jpg"
+                  src="images/products/switchgear products/mpcb-gv2me32-range-24-32a-make-schneider-1000x1000.webp"
                   alt="Differential Protection Relay - Advanced protection"
                   loading="lazy"
                 />
@@ -719,13 +675,10 @@
             </article>
 
             <!-- Product 13: Differential Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/auxiliary-switch-screw-type-alternate-500x500.webp"
+                  src="images/products/switchgear products/schneider-gv2me03-mpcb-1000x1000 (1).webp"
                   alt="Differential Protection Relay - Advanced protection"
                   loading="lazy"
                 />
@@ -754,13 +707,10 @@
             </article>
 
             <!-- Product 14: Differential Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/shunt-trip-coil-500x500.webp"
+                  src="images/products/switchgear products/schneider-gv2me03-mpcb-1000x1000 (2).webp"
                   alt="Differential Protection Relay - Advanced protection"
                   loading="lazy"
                 />
@@ -789,13 +739,10 @@
             </article>
 
             <!-- Product 15: Differential Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/solenoid-assembly-coil-500x500.webp"
+                  src="images/products/switchgear products/schneider-gv2me03-mpcb-1000x1000 (3).webp"
                   alt="Differential Protection Relay - Advanced protection"
                   loading="lazy"
                 />
@@ -824,13 +771,10 @@
             </article>
 
             <!-- Product 16: Differential Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/trip-solenoid-coil-500x500.webp"
+                  src="images/products/switchgear products/SG p.jpg"
                   alt="Differential Protection Relay - Advanced protection"
                   loading="lazy"
                 />
@@ -859,13 +803,682 @@
             </article>
 
             <!-- Product 17: Differential Protection Relay -->
-            <article
-              class="product-card"
-              data-category="protection-relays distribution"
-            >
+            <article class="product-card" data-category="switchgearproducts">
               <div class="product-image" data-enlarge>
                 <img
-                  src="images/products/wacker-metroark-silicone-17-compound-1000x1000.webp"
+                  src="images/products/switchgear products/schneider-gv2me03-mpcb-1000x1000.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 18: Differential Protection Relay -->
+            <article class="product-card" data-category="switchgearproducts">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/switchgear products/switchgear-component7.jpg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 19: Differential Protection Relay -->
+            <article class="product-card" data-category="switchgearproducts">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/switchgear products/switchgear-components1.jpg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 20: obsoleted products -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/63b568a3748d61.18442270.jpg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 21: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/63b568a3748d61.18442270.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 22: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/ABB 1 Relay.jpeg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 23: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/ABB 2 Relay .jpeg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 24: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/ABB 3 relay .jpeg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 25: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/ABB 4 Relay .jpeg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 26: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/ABB 5 Relay .jpeg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 27: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/Alstom relays 1.jpg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 28: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/Alstom relays.jpg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 29: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/No volt relay .jpeg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 30: Differential Protection Relay -->
+            <article class="product-card" data-category="obsoleted">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/obsoleted products/TCS relay.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 31: Differential Protection Relay -->
+            <article class="product-card" data-category="numericalrelays">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/numerical relays/ABB Numerical relay.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 32: Differential Protection Relay -->
+            <article class="product-card" data-category="numericalrelays">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/numerical relays/GE relays.jpg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 33: Differential Protection Relay -->
+            <article class="product-card" data-category="numericalrelays">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/numerical relays/GE relays.png"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 34: Differential Protection Relay -->
+            <article class="product-card" data-category="numericalrelays">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/numerical relays/Siemens _ Directional-Overcurrent-Protection-Reyrolle.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 35: Differential Protection Relay -->
+            <article class="product-card" data-category="numericalrelays">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/numerical relays/Siemens Numerical relay.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 36: Differential Protection Relay -->
+            <article class="product-card" data-category="numericalrelays">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/numerical relays/Siemens Relays _reyrolle5-protection-relay-medium-voltage.webp"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 37: Differential Protection Relay -->
+            <article class="product-card" data-category="gisspares">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/gis spares and accessories/1_3 contacts Density monitor .jpeg"
+                  alt="Differential Protection Relay - Advanced protection"
+                  loading="lazy"
+                />
+                <div class="image-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3>Differential Protection Relay</h3>
+                <p class="product-description">
+                  <span class="short-text"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors...</span
+                  >
+                  <span class="full-text" style="display: none"
+                    >High-speed differential protection relays for transformers,
+                    generators, and motors. Features percentage biased
+                    characteristics and harmonic restraint for superior
+                    protection.</span
+                  >
+                </p>
+                <button class="read-more-btn" aria-expanded="false">
+                  Read More <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Product 38: Differential Protection Relay -->
+            <article class="product-card" data-category="gisspares">
+              <div class="product-image" data-enlarge>
+                <img
+                  src="images/products/gis spares and accessories/2_Density monitor 2.jpeg"
                   alt="Differential Protection Relay - Advanced protection"
                   loading="lazy"
                 />
@@ -893,6 +1506,29 @@
               </div>
             </article>
           </main>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-container" id="paginationContainer">
+          <div class="pagination-info">
+            <span id="paginationInfo"
+              >Showing <strong id="startItem"></strong>-<strong
+                id="endItem"
+              ></strong>
+              of <strong id="totalItems"></strong> products</span
+            >
+          </div>
+          <div class="pagination" id="pagination">
+            <button class="pagination-btn" id="prevPage" disabled>
+              <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <div class="pagination-numbers" id="paginationNumbers">
+              <!-- Page numbers will be inserted here dynamically by JavaScript -->
+            </div>
+            <button class="pagination-btn" id="nextPage">
+              Next <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -1080,7 +1716,30 @@
       categoryHeaders.forEach((header) => {
         header.addEventListener("click", () => {
           const parentItem = header.parentElement;
-          parentItem.classList.toggle("active");
+          const hasSubcategories =
+            parentItem.querySelector(".subcategory-list");
+
+          if (hasSubcategories) {
+            // Toggle submenu for categories with subcategories
+            parentItem.classList.toggle("active");
+          } else {
+            // Filter products directly for categories without subcategories
+            const category = header.getAttribute("data-category");
+
+            // Remove active class from all category items
+            document.querySelectorAll(".category-item").forEach((item) => {
+              item.classList.remove("active");
+            });
+
+            // Remove active class from all subcategory links
+            subcategoryLinks.forEach((l) => l.classList.remove("active"));
+
+            // Add active class to clicked category
+            parentItem.classList.add("active");
+
+            // Filter products
+            filterProducts(category);
+          }
         });
       });
 
@@ -1282,6 +1941,140 @@
       productCards.forEach((card) => {
         cardObserver.observe(card);
       });
+
+      // ===================================
+      // PAGINATION FUNCTIONALITY
+      // ===================================
+      let currentPage = 1;
+      const itemsPerPage = 12;
+      let currentFilter = "all";
+
+      // Get pagination elements
+      const prevPageBtn = document.getElementById("prevPage");
+      const nextPageBtn = document.getElementById("nextPage");
+      const paginationNumbers = document.getElementById("paginationNumbers");
+      const startItemSpan = document.getElementById("startItem");
+      const endItemSpan = document.getElementById("endItem");
+      const totalItemsSpan = document.getElementById("totalItems");
+
+      // Function to get visible products based on current filter
+      function getVisibleProducts() {
+        return Array.from(productCards).filter((card) => {
+          if (currentFilter === "all") return true;
+          const categories = card.getAttribute("data-category");
+          return categories.includes(currentFilter);
+        });
+      }
+
+      // Function to update pagination display
+      function updatePagination() {
+        const visibleProducts = getVisibleProducts();
+        const totalPages = Math.ceil(visibleProducts.length / itemsPerPage);
+
+        // Update info text
+        const startItem = (currentPage - 1) * itemsPerPage + 1;
+        const endItem = Math.min(
+          currentPage * itemsPerPage,
+          visibleProducts.length
+        );
+        startItemSpan.textContent = visibleProducts.length > 0 ? startItem : 0;
+        endItemSpan.textContent = endItem;
+        totalItemsSpan.textContent = visibleProducts.length;
+
+        // Show/hide all products first
+        productCards.forEach((card) => {
+          card.style.display = "none";
+          card.style.opacity = "0";
+        });
+
+        // Show only products for current page
+        visibleProducts.forEach((card, index) => {
+          if (
+            index >= (currentPage - 1) * itemsPerPage &&
+            index < currentPage * itemsPerPage
+          ) {
+            card.style.display = "block";
+            setTimeout(() => (card.style.opacity = "1"), 10);
+          }
+        });
+
+        // Update page numbers
+        paginationNumbers.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+          const pageBtn = document.createElement("button");
+          pageBtn.className =
+            "pagination-number" + (i === currentPage ? " active" : "");
+          pageBtn.textContent = i;
+          pageBtn.addEventListener("click", () => {
+            currentPage = i;
+            updatePagination();
+            scrollToProducts();
+          });
+          paginationNumbers.appendChild(pageBtn);
+        }
+
+        // Update prev/next buttons
+        prevPageBtn.disabled = currentPage === 1;
+        nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
+
+        // Hide pagination if only one page or no products
+        const paginationContainer = document.getElementById(
+          "paginationContainer"
+        );
+        if (totalPages <= 1) {
+          paginationContainer.style.display = "none";
+        } else {
+          paginationContainer.style.display = "block";
+        }
+      }
+
+      // Function to scroll to product grid
+      function scrollToProducts() {
+        const productGrid = document.getElementById("productGrid");
+        const headerHeight = document.querySelector(".header").offsetHeight;
+        const yOffset = -20 - headerHeight;
+        const y =
+          productGrid.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+
+      // Previous page button
+      prevPageBtn.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          updatePagination();
+          scrollToProducts();
+        }
+      });
+
+      // Next page button
+      nextPageBtn.addEventListener("click", () => {
+        const visibleProducts = getVisibleProducts();
+        const totalPages = Math.ceil(visibleProducts.length / itemsPerPage);
+        if (currentPage < totalPages) {
+          currentPage++;
+          updatePagination();
+          scrollToProducts();
+        }
+      });
+
+      // Update the original filterProducts function to work with pagination
+      const originalFilterProducts = filterProducts;
+      filterProducts = function (filter) {
+        currentFilter = filter;
+        currentPage = 1; // Reset to first page when filtering
+        updatePagination();
+
+        // Scroll to product grid on mobile
+        if (window.innerWidth < 768) {
+          scrollToProducts();
+        }
+      };
+
+      // Initialize pagination on page load
+      updatePagination();
     </script>
   </body>
 </html>
