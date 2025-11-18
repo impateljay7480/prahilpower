@@ -161,8 +161,14 @@
         <div class="products-layout">
           <!-- Category Sidebar -->
           <aside class="category-sidebar" id="categorySidebar">
-            <h3 class="sidebar-title">Product Categories</h3>
-            <nav class="category-nav">
+            <div class="category-header">
+              <h3 class="sidebar-title">Categories</h3>
+              <button class="category-dropdown-toggle" id="categoryDropdownToggle" aria-label="Toggle categories menu" aria-expanded="false">
+                <span class="selected-category">Transformer Spares</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <nav class="category-nav" aria-label="Product categories">
               <button class="category-item active" data-category="transformer spares">
                 <span>Transformer Spares</span>
               </button>
@@ -181,6 +187,14 @@
 
               <button class="category-item" data-category="gis spares and accessories">
                 <span>GIS Spares & Accessories</span>
+              </button>
+
+              <!-- <button class="category-item" data-category="mv switchgear parts">
+                <span>MV Switchgear parts</span>
+              </button> -->
+
+              <button class="category-item" data-category="grease and lubricants">
+                <span>Grease and Lubricants</span>
               </button>
             </nav>
           </aside>
@@ -375,8 +389,9 @@
       role="dialog"
       aria-modal="true"
       aria-labelledby="modalImage"
+      aria-hidden="true"
     >
-      <span class="image-modal-close" aria-label="Close modal">&times;</span>
+      <span class="image-modal-close" aria-label="Close modal" tabindex="0">&times;</span>
       <img
         class="image-modal-content"
         id="modalImage"
@@ -423,12 +438,11 @@
       // PRODUCTS CAROUSEL FUNCTIONALITY
       // ===================================
 
-      // Product data structure with images from folders
       const productData = {
         "transformer spares": {
           title: "Transformer Spares",
           description:
-            "Premium transformer components and replacement parts ensuring optimal performance and extended lifespan. We provide comprehensive solutions compatible with all major transformer brands and specifications.",
+            "PPE is fully geared to supply all spares of all ratings, makes, models of transformer. Spares are procured and checked as per standard quality norms set by us. Spares are procured from approved sources m Minimum cycle time through planning, foresight, focus and thrust. All Spares & accessories are available with us like:",
           images: [
             {
               src: "images/products/transformer spares/transformer.jpg",
@@ -452,22 +466,37 @@
             },
           ],
           products: [
-            "Power Transformers",
-            "Distribution Transformers",
-            "Bushing Assemblies",
-            "Tap Changers & OLTC Parts",
-            "Cooling System Components",
-            "Oil Level Gauges & Indicators",
-            "Temperature Monitoring Sensors",
-            "Breather & Silica Gel Units",
-            "Gaskets & Sealing Materials",
-            "Insulation Components",
+            "Transformer Oil (Mineral/Ester)",
+            "Buchholz Relay",
+            "Magnetic Oil Level Gauge Relay",
+            "Oil Surge Relay",
+            "Pressure Relief Valves",
+            "Breathers (Clear View/Metallic)",
+            "Silica Gel",
+            "Oil Temperature Indicator",
+            "Winding Temperature Indicator",
+            "Marshalling Box",
+            "Oil Thermometers",
+            "Tap Changer Switch & Handle",
+            "Bushing Insulators HT & LT (Epoxy Bushing/Ceramic)",
+            "Bushing Rod HT & LT",
+            "Radiators",
+            "Valves (Radiator Valves/Drain Valves)",
+            "Gaskets & Oil Seals",
+            "AVR Relay & TPI for RTCC Panel",
+            "Phase Board",
+            "Bushing Board",
+            "Energy Accumulator Assembly",
+            "Epoxy Arm Assembly",
+            "Oil Seals & Gaskets",
+            "Copper Tubes & Tapper Pins",
+            "AVR Relay & TPI for RTCC Panel",
           ],
         },
         "switchgear products": {
           title: "Switchgear Products",
           description:
-            "Premium switchgear solutions from leading brands like Schneider Electric and L&T. Complete range of protection and control devices for industrial and commercial applications.",
+            "LV (low voltage) switchgear products include a variety of components like circuit breakers (MCCB, MCB, ACB), switches, fuses, contactors, and control panels, used to control, protect, and isolate electrical systems operating below 1,000 volts. These products are assembled into assemblies like distribution boards and cabinets to manage power in residential, commercial, and industrial settings.",
           images: [
             {
               src: "images/products/switchgear products/schneider-gv2me03-mpcb-1000x1000.webp",
@@ -491,16 +520,10 @@
             },
           ],
           products: [
-            "Schneider MPCB (Motor Protection Circuit Breakers)",
-            "L&T RCCB (Residual Current Circuit Breakers)",
-            "Contactors & Overload Relays",
-            "MCB & MCCB Range",
-            "ACB (Air Circuit Breakers)",
-            "VCB (Vacuum Circuit Breakers)",
-            "Control & Relay Panels",
-            "Bus Bar Systems",
-            "Cable Glands & Terminations",
-            "Metering & Protection Devices",
+            "Rotary & Load Break Switches",
+            "Timing Devices & supply monitors ",
+            "Modular Remote control units",
+            "Digital panel meters"
           ],
         },
         "obsoleted products": {
@@ -597,15 +620,56 @@
           ],
           products: [
             "SF6 Gas Density Monitors",
-            "GIS Contact Systems (3-Pole)",
-            "Gas Pressure Monitoring Devices",
-            "Insulator & Bushing Components",
-            "Operating Mechanism Parts",
-            "Disconnector Contact Assemblies",
-            "Earthing Switch Components",
-            "Sealing & Gasket Materials",
-            "Arc Interruption Chambers",
             "GIS Control & Monitoring Accessories",
+          ],
+        },
+        "grease and lubricants": {
+          title: "Grease and Lubricants",
+          description:
+            "Premium electrical-grade greases, lubricants, and compounds from Molykote and Metroark. Specialized formulations for high-voltage applications, insulation, corrosion protection, and extreme operating conditions in power transmission and distribution systems.",
+          images: [
+            {
+              src: "images/products/Grease and Lubricants/molykote-electrical-insulating-19.jpg",
+              alt: "Molykote Electrical Insulating Compound",
+            },
+            {
+              src: "images/products/Grease and Lubricants/molykote-hvic-high-voltage-insulator-coating-17.jpg",
+              alt: "Molykote HVIC High Voltage Insulator Coating",
+            },
+            {
+              src: "images/products/Grease and Lubricants/wacker-metroark-silicone-2.webp",
+              alt: "Wacker Metroark Silicone Compound",
+            },
+            {
+              src: "images/products/Grease and Lubricants/molykote-compound-10.jpg",
+              alt: "Molykote Compound Range",
+            },
+            {
+              src: "images/products/Grease and Lubricants/molykote-paste-25.jpg",
+              alt: "Molykote Specialty Pastes",
+            },
+          ],
+          products: [
+            "Molykote 4 Electrical Insulating Compound",
+            "Molykote 5 Compound (High Voltage Applications)",
+            "Molykote 55 O-Ring Grease",
+            "Molykote 111 Compound (Silicone-Free)",
+            "Molykote HVIC (High Voltage Insulator Coating)",
+            "Molykote DX Paste (Anti-Seize & Lubricant)",
+            "Molykote HTP Paste (High Temperature)",
+            "Molykote EM-30L Grease (Electric Motor)",
+            "Molykote G-807 Low Friction Silicone Compound",
+            "Molykote BR-3 (Contact & Busbar Protection)",
+            "Molykote D-Paste (Dielectric Grease)",
+            "Molykote Z-Powder (Dry Lubricant)",
+            "Molykote L-8030 Lubricant",
+            "Molykote L-13 Thinner",
+            "Molykote FS-841 Grease (Food Safe)",
+            "Molykote Food Machinery Oil Spray",
+            "Metroark Silicone Compound",
+            "Wacker Metroark Silicone (RTV Coating)",
+            "Silicone Grease (General Purpose)",
+            "Anti-Corrosion Compounds",
           ],
         },
       };
@@ -624,23 +688,102 @@
       let currentSlideIndex = 0;
       let currentCategory = null;
 
+      // Dropdown toggle functionality
+      const categoryDropdownToggle = document.getElementById("categoryDropdownToggle");
+      const categoryNav = document.querySelector(".category-nav");
+      
+      if (categoryDropdownToggle) {
+        categoryDropdownToggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isExpanded = categoryDropdownToggle.getAttribute("aria-expanded") === "true";
+          categoryDropdownToggle.setAttribute("aria-expanded", !isExpanded);
+          categoryNav.classList.toggle("active");
+          
+          // Smooth scroll to top of dropdown when opening on mobile
+          if (!isExpanded && window.innerWidth <= 1024) {
+            setTimeout(() => {
+              categoryNav.scrollTop = 0;
+            }, 50);
+          }
+        });
+        
+        // Keyboard accessibility for dropdown
+        categoryDropdownToggle.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            categoryDropdownToggle.click();
+          }
+        });
+      }
+
       // Category sidebar click handlers
       const categoryItems = document.querySelectorAll(".category-item");
       categoryItems.forEach((item) => {
         item.addEventListener("click", () => {
           const category = item.getAttribute("data-category");
+          const categoryText = item.querySelector("span").textContent;
           
           // Update active state
           categoryItems.forEach((cat) => cat.classList.remove("active"));
           item.classList.add("active");
           
+          // Update dropdown button text on mobile
+          if (window.innerWidth <= 1024) {
+            const selectedCategory = document.querySelector(".selected-category");
+            if (selectedCategory) {
+              selectedCategory.textContent = categoryText;
+            }
+            // Close dropdown after selection with smooth animation
+            categoryNav.classList.remove("active");
+            categoryDropdownToggle.setAttribute("aria-expanded", "false");
+            
+            // Scroll to products on mobile for better UX
+            setTimeout(() => {
+              const productsMain = document.getElementById("productsMainContent");
+              if (productsMain) {
+                productsMain.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+            }, 300);
+          }
+          
           showCategoryProducts(category);
+        });
+        
+        // Keyboard accessibility for category items
+        item.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            item.click();
+          }
         });
       });
 
       // Load default category on page load
       window.addEventListener("DOMContentLoaded", () => {
         showCategoryProducts("transformer spares");
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener("click", (e) => {
+        if (categoryDropdownToggle && categoryNav) {
+          const isClickInside = e.target.closest(".category-sidebar");
+          if (!isClickInside && categoryNav.classList.contains("active")) {
+            categoryNav.classList.remove("active");
+            categoryDropdownToggle.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+      
+      // Handle window resize - close dropdown and reset on desktop
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (window.innerWidth > 1024 && categoryNav && categoryDropdownToggle) {
+            categoryNav.classList.remove("active");
+            categoryDropdownToggle.setAttribute("aria-expanded", "false");
+          }
+        }, 250);
       });
 
       // Show category products in carousel
@@ -705,6 +848,7 @@
         }
       });
 
+
       // Go to specific slide
       function goToSlide(index) {
         currentSlideIndex = index;
@@ -747,25 +891,35 @@
       // Touch/swipe support for mobile
       let touchStartX = 0;
       let touchEndX = 0;
+      let touchStartY = 0;
+      let touchEndY = 0;
 
       carouselTrack.addEventListener("touchstart", (e) => {
         touchStartX = e.changedTouches[0].screenX;
-      });
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
 
       carouselTrack.addEventListener("touchend", (e) => {
         touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
         handleSwipe();
-      });
+      }, { passive: true });
 
       function handleSwipe() {
         const swipeThreshold = 50;
-        if (touchStartX - touchEndX > swipeThreshold && !nextSlide.disabled) {
-          nextSlide.click();
-        } else if (
-          touchEndX - touchStartX > swipeThreshold &&
-          !prevSlide.disabled
-        ) {
-          prevSlide.click();
+        const horizontalSwipe = Math.abs(touchStartX - touchEndX);
+        const verticalSwipe = Math.abs(touchStartY - touchEndY);
+        
+        // Only handle horizontal swipes (ignore vertical scrolling)
+        if (horizontalSwipe > verticalSwipe && horizontalSwipe > swipeThreshold) {
+          if (touchStartX - touchEndX > swipeThreshold && !nextSlide.disabled) {
+            nextSlide.click();
+          } else if (
+            touchEndX - touchStartX > swipeThreshold &&
+            !prevSlide.disabled
+          ) {
+            prevSlide.click();
+          }
         }
       }
     </script>
