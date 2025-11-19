@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>
-      Our Products - Electrical Equipment & Power Solutions | Prahil Power
+      Products - Electrical Equipment & Power Solutions | Prahil Power
     </title>
     <meta
       name="description"
@@ -147,7 +147,7 @@
       <div class="container">
         <h1>Our Products</h1>
         <p>
-          Explore our comprehensive range of electrical and power solutions
+          Explore our comprehensive range of electrical and power solutions,
           engineered for excellence and reliability
         </p>
       </div>
@@ -173,9 +173,32 @@
                 <span>Transformer Spares</span>
               </button>
 
-              <button class="category-item" data-category="switchgear products">
-                <span>Switchgear Products</span>
-              </button>
+              <div class="category-with-sub">
+                <button class="category-item" data-category="switchgear products" data-has-subcategories="true">
+                  <span>Switchgear Products</span>
+                  <i class="fas fa-chevron-down subcategory-toggle"></i>
+                </button>
+                <div class="subcategory-list">
+                  <button class="subcategory-item" data-subcategory="rotary-switches" data-parent="switchgear products">
+                    <span>Rotary & Load Break Switches</span>
+                  </button>
+                  <button class="subcategory-item" data-subcategory="timing-devices" data-parent="switchgear products">
+                    <span>Timing Devices & Supply Monitors</span>
+                  </button>
+                  <button class="subcategory-item" data-subcategory="remote-control" data-parent="switchgear products">
+                    <span>Modular Remote Control Units</span>
+                  </button>
+                  <button class="subcategory-item" data-subcategory="digital-meters" data-parent="switchgear products">
+                    <span>Digital Panel Meters</span>
+                  </button>
+                  <button class="subcategory-item" data-subcategory="switch-disconnector" data-parent="switchgear products">
+                    <span>MCCB, ACB, Switch Disconnector & MI Contactor</span>
+                  </button>
+                  <button class="subcategory-item" data-subcategory="electronic-motor-protection-relay" data-parent="switchgear products">
+                    <span>Electronic Motor Protection Relay</span>
+                  </button>
+                </div>
+              </div>
 
               <button class="category-item" data-category="obsoleted products">
                 <span>Obsoleted Products</span>
@@ -189,12 +212,8 @@
                 <span>GIS Spares & Accessories</span>
               </button>
 
-              <!-- <button class="category-item" data-category="mv switchgear parts">
-                <span>MV Switchgear parts</span>
-              </button> -->
-
               <button class="category-item" data-category="grease and lubricants">
-                <span>Grease and Lubricants</span>
+                <span>Grease & Lubricants</span>
               </button>
             </nav>
           </aside>
@@ -252,6 +271,14 @@
               <ul id="productList" class="product-bullet-list">
                 <!-- Product names will be dynamically inserted here -->
               </ul>
+            </div>
+
+            <!-- PDF Resources Section -->
+            <div class="pdf-resources-section" id="pdfResourcesSection" style="display: none;">
+              <h4>Product Catalogs:</h4>
+              <div id="pdfResourcesList" class="pdf-resources-grid">
+                <!-- PDF cards will be dynamically inserted here -->
+              </div>
             </div>
           </div>
         </div>
@@ -442,27 +469,27 @@
         "transformer spares": {
           title: "Transformer Spares",
           description:
-            "PPE is fully geared to supply all spares of all ratings, makes, models of transformer. Spares are procured and checked as per standard quality norms set by us. Spares are procured from approved sources m Minimum cycle time through planning, foresight, focus and thrust. All Spares & accessories are available with us like:",
+            "PPE is fully equipped to supply all spares of all ratings, makes, and models of transformers. Spares are procured and checked as per standard quality norms set by us. Spares are procured from approved sources with minimum cycle time through planning, foresight, focus, and thrust. All spares & accessories are available with us:",
           images: [
             {
               src: "images/products/transformer spares/transformer.jpg",
-              alt: "Power Transformer",
+              alt: "High-voltage power transformer unit",
             },
             {
               src: "images/products/transformer spares/transformer2.jpg",
-              alt: "Distribution Transformer",
+              alt: "Distribution transformer for power networks",
             },
             {
               src: "images/products/transformer spares/spares 5.jpg",
-              alt: "Transformer Spare Parts",
+              alt: "Complete set of transformer spare parts and components",
             },
             {
               src: "images/products/transformer spares/transformer spares 1.jpg",
-              alt: "Transformer Components Kit",
+              alt: "Transformer components kit with bushings and accessories",
             },
             {
               src: "images/products/transformer spares/transformer spares 2.png",
-              alt: "Transformer Accessories",
+              alt: "Transformer accessories including valves and gauges",
             },
           ],
           products: [
@@ -478,92 +505,124 @@
             "Marshalling Box",
             "Oil Thermometers",
             "Tap Changer Switch & Handle",
-            "Bushing Insulators HT & LT (Epoxy Bushing/Ceramic)",
+            "Bushing Insulators HT & LT (Epoxy/Ceramic)",
             "Bushing Rod HT & LT",
             "Radiators",
-            "Valves (Radiator Valves/Drain Valves)",
+            "Valves (Radiator/Drain Valves)",
             "Gaskets & Oil Seals",
             "AVR Relay & TPI for RTCC Panel",
             "Phase Board",
             "Bushing Board",
             "Energy Accumulator Assembly",
             "Epoxy Arm Assembly",
-            "Oil Seals & Gaskets",
-            "Copper Tubes & Tapper Pins",
-            "AVR Relay & TPI for RTCC Panel",
+            "Copper Tubes & Taper Pins",
           ],
         },
         "switchgear products": {
           title: "Switchgear Products",
           description:
-            "LV (low voltage) switchgear products include a variety of components like circuit breakers (MCCB, MCB, ACB), switches, fuses, contactors, and control panels, used to control, protect, and isolate electrical systems operating below 1,000 volts. These products are assembled into assemblies like distribution boards and cabinets to manage power in residential, commercial, and industrial settings.",
+            "Low voltage (LV) switchgear products include a variety of components such as circuit breakers (MCCB, MCB, ACB), switches, fuses, contactors, and control panels. These are used to control, protect, and isolate electrical systems operating below 1,000 volts. Products are assembled into distribution boards and cabinets to manage power in residential, commercial, and industrial settings.",
           images: [
             {
               src: "images/products/switchgear products/schneider-gv2me03-mpcb-1000x1000.webp",
-              alt: "Schneider MPCB Motor Protection Circuit Breaker",
+              alt: "Schneider Electric motor protection circuit breaker (MPCB)",
             },
             {
               src: "images/products/switchgear products/L&T.jpg",
-              alt: "L&T Switchgear Products",
+              alt: "L&T brand switchgear and electrical control products",
             },
             {
               src: "images/products/switchgear products/l-t-rccb-25amp-4pole-100ma-bc402510-1000x1000.jpg",
-              alt: "L&T RCCB Residual Current Circuit Breaker",
+              alt: "L&T residual current circuit breaker (RCCB) 25A 4-pole",
             },
             {
               src: "images/products/switchgear products/contactors.webp",
-              alt: "Electrical Contactors",
+              alt: "Industrial electrical contactors for power control",
             },
             {
               src: "images/products/switchgear products/switchgear-components1.jpg",
-              alt: "Switchgear Components Assembly",
+              alt: "Complete switchgear components assembly kit",
             },
           ],
-          products: [
-            "Rotary & Load Break Switches",
-            "Timing Devices & supply monitors ",
-            "Modular Remote control units",
-            "Digital panel meters"
-          ],
+          products: [],
+          subcategories: {
+            "rotary-switches": {
+              title: "Rotary & Load Break Switches",
+              description: "High-quality rotary and load break switches designed for reliable power distribution and electrical isolation in industrial and commercial applications. Our range includes heavy-duty switches built to withstand frequent operations while ensuring safety and operational efficiency. These switches are essential for manual control of electrical circuits, providing a visible disconnection point for maintenance and emergency situations.",
+              products: [
+              ]
+            },
+            "timing-devices": {
+              title: "Timing Devices & Supply Monitors",
+              description: "Advanced timing relays and supply monitoring equipment engineered for automated control and comprehensive power quality monitoring. Our timing devices offer precision control for sequential operations, time-delayed functions, and scheduled automation tasks. Supply monitors continuously track voltage levels, phase sequences, and power quality parameters to prevent equipment damage and ensure optimal performance in critical electrical installations.",
+              products: [
+              ]
+            },
+            "remote-control": {
+              title: "Modular Remote Control Units",
+              description: "Modern modular remote control systems providing flexible and efficient electrical system management from centralized or distributed control points. These units enable operators to safely control electrical equipment from remote locations, reducing exposure to hazardous environments while improving operational efficiency. Ideal for applications requiring wireless or wired remote switching, monitoring, and control of motors, pumps, lighting systems, and industrial machinery.",
+              products: [
+              ]
+            },
+            "digital-meters": {
+              title: "Digital Panel Meters",
+              description: "Precision digital panel meters engineered for accurate measurement and continuous monitoring of critical electrical parameters. Our meters feature advanced microprocessor technology with clear LED/LCD displays, providing real-time data on voltage, current, power, energy consumption, frequency, and power factor. Essential tools for energy management, load monitoring, and preventive maintenance in industrial, commercial, and utility applications.",
+              products: [
+              ]
+            },
+            "switch-disconnector": {
+              title: "MCCB, ACB, Switch Disconnector & MI Contactor",
+              description: "Comprehensive range of circuit protection and switching devices including Molded Case Circuit Breakers (MCCB), Air Circuit Breakers (ACB), switch disconnectors, and mechanically interlocked contactors. MCCBs provide overcurrent and short-circuit protection for low-voltage applications, while ACBs offer robust protection for higher current ratings with adjustable trip settings. Switch disconnectors ensure safe isolation of electrical circuits, and MI contactors provide reliable switching with mechanical interlocking to prevent simultaneous closure of multiple circuits, ensuring operational safety and equipment protection.",
+              products: [
+              ]
+            },
+            "electronic-motor-protection-relay": {
+              title: "Electronic Motor Protection Relay",
+              description: "Intelligent electronic motor protection relays designed to safeguard motors against overload, phase imbalance, single-phasing, under-voltage, over-voltage, phase reversal, and ground faults. These microprocessor-based relays offer advanced protection features including thermal modeling, startup delay, trip memory, and diagnostic capabilities. Ideal for protecting three-phase motors in industrial applications, these relays help prevent costly downtime, extend motor life, and reduce maintenance costs through early fault detection and preventive trip mechanisms.",
+              products: [
+              ]
+            }
+          }
         },
         "obsoleted products": {
-          title: "Obsoleted Products",
+          title: "Obsolete Products",
           description:
-            "Specialized in sourcing discontinued and obsolete protection relays from ABB, Alstom, and other legacy systems. Expert support for replacement parts and modern equivalents.",
+            "We specialize in sourcing discontinued and obsolete protection relays from ABB, Alstom, and other legacy systems. Expert support for replacement parts and modern equivalents available.",
           images: [
             {
-              src: "images/products/obsoleted products/ABB 1 Relay.jpeg",
-              alt: "ABB Discontinued Protection Relay",
+              src: "images/products/obsoleted products/relay.jpg",
+              alt: "ABB discontinued protection relay for legacy systems",
             },
             {
-              src: "images/products/obsoleted products/Alstom relays.jpg",
-              alt: "Alstom Legacy Protection Relays",
+              src: "images/products/obsoleted products/relay1.jpeg",
+              alt: "Alstom legacy protection relay modules",
             },
             {
-              src: "images/products/obsoleted products/ABB 3 relay .jpeg",
-              alt: "ABB Vintage Relay Module",
+              src: "images/products/obsoleted products/relay2.jpeg",
+              alt: "Vintage ABB relay module for electrical protection",
             },
             {
-              src: "images/products/obsoleted products/TCS relay.webp",
-              alt: "TCS Protection Relay",
+              src: "images/products/obsoleted products/relay3.webp",
+              alt: "TCS protection relay for industrial applications",
             },
             {
-              src: "images/products/obsoleted products/No volt relay .jpeg",
-              alt: "No Voltage Release Relay",
+              src: "images/products/obsoleted products/relay4.jpeg",
+              alt: "No-voltage release relay mechanism",
+            },
+            {
+              src: "images/products/obsoleted products/relay5.jpeg",
+              alt: "Under-voltage protection relay unit",
+            },
+            {
+              src: "images/products/obsoleted products/relay6.jpg",
+              alt: "Electromechanical no-voltage relay device",
+            },
+            {
+              src: "images/products/obsoleted products/relay7.jpg",
+              alt: "Legacy voltage protection relay system",
             },
           ],
-          products: [
-            "ABB Discontinued Relay Models",
-            "Alstom Legacy Protection Systems",
-            "Vintage Electromechanical Relays",
-            "Obsolete Static Relays",
-            "TCS & Tripcon Relays",
-            "No-Volt & Under-Volt Relays",
-            "Legacy Numerical Relays",
-            "Discontinued Control Modules",
-            "Spare Parts for Old Systems",
-            "Retrofit & Upgrade Solutions",
-          ],
+          products: [],
         },
         "numerical relays": {
           title: "Numerical Relays",
@@ -571,38 +630,50 @@
             "Advanced numerical protection relays from ABB, Siemens (Reyrolle), and GE. Digital technology for comprehensive power system protection with intelligent diagnostics and communication.",
           images: [
             {
-              src: "images/products/numerical relays/ABB Numerical relay.webp",
+              src: "images/products/numerical relays/numerical-relay.webp",
               alt: "ABB Numerical Protection Relay",
             },
             {
-              src: "images/products/numerical relays/Siemens Numerical relay.webp",
+              src: "images/products/numerical relays/numerical-relay-1.jpg",
               alt: "Siemens Numerical Relay",
             },
             {
-              src: "images/products/numerical relays/Siemens _ Directional-Overcurrent-Protection-Reyrolle.webp",
+              src: "images/products/numerical relays/numerical-relay-2.png",
               alt: "Siemens Reyrolle Directional Overcurrent Protection",
             },
             {
-              src: "images/products/numerical relays/GE relays.jpg",
+              src: "images/products/numerical relays/numerical-relay-3.webp",
               alt: "GE Multilin Protection Relays",
             },
             {
-              src: "images/products/numerical relays/Siemens Relays _reyrolle5-protection-relay-medium-voltage.webp",
+              src: "images/products/numerical relays/numerical-relay-4.webp",
               alt: "Siemens Reyrolle Medium Voltage Protection",
             },
+            {
+              src: "images/products/numerical relays/numerical-relay-5.webp",
+              alt: "Siemens Reyrolle Medium Voltage Protection",
+            },
+            {
+              src: "images/products/numerical relays/numerical-relay-6.webp",
+              alt: "Siemens Reyrolle Medium Voltage Protection",
+            }
           ],
           products: [
-            "ABB REF/REM Series Protection Relays",
-            "Siemens Reyrolle Protection Relays",
-            "GE Multilin SR/UR Series",
-            "Overcurrent & Earth Fault Protection",
-            "Differential Protection Relays",
-            "Distance Protection Units",
-            "Motor & Generator Protection",
-            "Transformer Protection Relays",
-            "Feeder Management Relays",
-            "Bay Control & Protection Systems",
+            "GE Relays",
+            "Siemens Relays"
           ],
+          pdfs: [
+            {
+              name: "ABB Numerical Relay",
+              url: "images/products/numerical relays/ABB NUMERICAL RELAY.pdf",
+              icon: "fas fa-file-pdf"
+            },
+            {
+              name: "ABB Electromechanical Relay",
+              url: "images/products/numerical relays/ABB ELECTROMECHANICAL RELAY.pdf",
+              icon: "fas fa-file-pdf"
+            }
+          ]
         },
         "gis spares and accessories": {
           title: "GIS Spares & Accessories",
@@ -610,67 +681,101 @@
             "Gas Insulated Switchgear components including SF6 density monitors, contacts, and critical spare parts. Ensuring reliability and safety for high-voltage GIS installations.",
           images: [
             {
-              src: "images/products/gis spares and accessories/1_3 contacts Density monitor .jpeg",
+              src: "images/products/gis spares and accessories/gis.jpeg",
               alt: "GIS Contacts and SF6 Density Monitor",
             },
             {
-              src: "images/products/gis spares and accessories/2_Density monitor 2.jpeg",
+              src: "images/products/gis spares and accessories/gis-2.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },
+            {
+              src: "images/products/gis spares and accessories/gis-3.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },
+            {
+              src: "images/products/gis spares and accessories/gis-4.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },
+            {
+              src: "images/products/gis spares and accessories/gis-5.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },{
+              src: "images/products/gis spares and accessories/gis-6.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            }
+            ,{
+              src: "images/products/gis spares and accessories/gis-7.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },{
+              src: "images/products/gis spares and accessories/gis-8.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },{
+              src: "images/products/gis spares and accessories/gis-9.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },
+            {
+              src: "images/products/gis spares and accessories/gis-10.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },
+            {
+              src: "images/products/gis spares and accessories/gis-11.jpg",
+              alt: "SF6 Gas Density Monitor System",
+            },{
+              src: "images/products/gis spares and accessories/gis-12.jpg",
               alt: "SF6 Gas Density Monitor System",
             }
           ],
           products: [
-            "SF6 Gas Density Monitors",
-            "GIS Control & Monitoring Accessories",
+            "Auxiliary contacts",
+            "Contactor",
+            "SF6 Gas density monitor",
+            "HGIS Circuit breaker Motor",
+            "FES"
           ],
         },
         "grease and lubricants": {
-          title: "Grease and Lubricants",
+          title: "Grease & Lubricants",
           description:
-            "Premium electrical-grade greases, lubricants, and compounds from Molykote and Metroark. Specialized formulations for high-voltage applications, insulation, corrosion protection, and extreme operating conditions in power transmission and distribution systems.",
+            "MOLYKOTE® greases are engineered to withstand severe-duty conditions. Our comprehensive range of high-performance greases – from solid to semi-solid materials with lubricating fluids, thickening agents, and additives – delivers exceptional performance: High-temperature operation exceeding 180°C (356°F), low-temperature performance down to -40°C (-40°F) and in some cases as low as -73°C (-99°F), excellent resistance to chemicals including solvents, fuels, and acids, superior corrosion protection with resistance to moisture, oxidation, and water washout, solid lubricants for enhanced wear surface protection, and specialized bases including silicone, fluorosilicone, and PFPE (perfluoropolyether) oils. MOLYKOTE® greases are suitable for a wide range of applications including gears, bearings, conveyor systems, slides, drives, pumps, valves, seats, and shafts.",
           images: [
             {
-              src: "images/products/Grease and Lubricants/molykote-electrical-insulating-19.jpg",
-              alt: "Molykote Electrical Insulating Compound",
+              src: "images/products/Grease and Lubricants/Grease.jpg",
+              alt: "Molykote electrical insulating compound for high-voltage applications",
             },
             {
-              src: "images/products/Grease and Lubricants/molykote-hvic-high-voltage-insulator-coating-17.jpg",
-              alt: "Molykote HVIC High Voltage Insulator Coating",
+              src: "images/products/Grease and Lubricants/Grease-1.jpg",
+              alt: "Molykote HVIC high voltage insulator coating solution",
             },
             {
-              src: "images/products/Grease and Lubricants/wacker-metroark-silicone-2.webp",
-              alt: "Wacker Metroark Silicone Compound",
+              src: "images/products/Grease and Lubricants/Grease-2.jpg",
+              alt: "Wacker Metroark silicone compound for electrical insulation",
             },
             {
-              src: "images/products/Grease and Lubricants/molykote-compound-10.jpg",
-              alt: "Molykote Compound Range",
+              src: "images/products/Grease and Lubricants/Grease-3.jpg",
+              alt: "Comprehensive range of Molykote specialty compounds",
             },
             {
-              src: "images/products/Grease and Lubricants/molykote-paste-25.jpg",
-              alt: "Molykote Specialty Pastes",
+              src: "images/products/Grease and Lubricants/Grease-4.webp",
+              alt: "Molykote specialty pastes for industrial lubrication",
+            },
+            {
+              src: "images/products/Grease and Lubricants/Grease-5.jpg",
+              alt: "Molykote high-performance lubrication paste",
+            },
+            {
+              src: "images/products/Grease and Lubricants/Grease-6.jpg",
+              alt: "Molykote extreme temperature grease solution",
+            },
+            {
+              src: "images/products/Grease and Lubricants/Grease-7.jpg",
+              alt: "Molykote anti-friction specialty lubricant",
+            },
+            {
+              src: "images/products/Grease and Lubricants/Grease-8.jpg",
+              alt: "Molykote industrial-grade specialty grease",
             },
           ],
-          products: [
-            "Molykote 4 Electrical Insulating Compound",
-            "Molykote 5 Compound (High Voltage Applications)",
-            "Molykote 55 O-Ring Grease",
-            "Molykote 111 Compound (Silicone-Free)",
-            "Molykote HVIC (High Voltage Insulator Coating)",
-            "Molykote DX Paste (Anti-Seize & Lubricant)",
-            "Molykote HTP Paste (High Temperature)",
-            "Molykote EM-30L Grease (Electric Motor)",
-            "Molykote G-807 Low Friction Silicone Compound",
-            "Molykote BR-3 (Contact & Busbar Protection)",
-            "Molykote D-Paste (Dielectric Grease)",
-            "Molykote Z-Powder (Dry Lubricant)",
-            "Molykote L-8030 Lubricant",
-            "Molykote L-13 Thinner",
-            "Molykote FS-841 Grease (Food Safe)",
-            "Molykote Food Machinery Oil Spray",
-            "Metroark Silicone Compound",
-            "Wacker Metroark Silicone (RTV Coating)",
-            "Silicone Grease (General Purpose)",
-            "Anti-Corrosion Compounds",
-          ],
+          products: [],
         },
       };
 
@@ -684,6 +789,8 @@
       const productDescTitle = document.getElementById("productDescTitle");
       const productDescText = document.getElementById("productDescText");
       const productList = document.getElementById("productList");
+      const pdfResourcesSection = document.getElementById("pdfResourcesSection");
+      const pdfResourcesList = document.getElementById("pdfResourcesList");
 
       let currentSlideIndex = 0;
       let currentCategory = null;
@@ -786,9 +893,165 @@
         }, 250);
       });
 
+      // Subcategory handling
+      const subcategoryItems = document.querySelectorAll(".subcategory-item");
+      let currentSubcategory = null;
+
+      // Handle subcategory clicks
+      subcategoryItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const subcategory = item.getAttribute("data-subcategory");
+          const parentCategory = item.getAttribute("data-parent");
+          
+          // Update active state for subcategories
+          const parentSubcategoryItems = document.querySelectorAll(`.subcategory-item[data-parent="${parentCategory}"]`);
+          parentSubcategoryItems.forEach((sub) => sub.classList.remove("active"));
+          item.classList.add("active");
+          
+          showSubcategoryProducts(parentCategory, subcategory);
+
+          // Close mobile dropdown
+          if (window.innerWidth <= 1024 && categoryNav) {
+            categoryNav.classList.remove("active");
+            if (categoryDropdownToggle) {
+              categoryDropdownToggle.setAttribute("aria-expanded", "false");
+            }
+            // Scroll to products on mobile
+            setTimeout(() => {
+              const productsMain = document.getElementById("productsMainContent");
+              if (productsMain) {
+                productsMain.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+            }, 300);
+          }
+        });
+      });
+
+      // Handle category with subcategories
+      const categoryWithSub = document.querySelector('[data-has-subcategories="true"]');
+      if (categoryWithSub) {
+        categoryWithSub.addEventListener("click", (e) => {
+          const category = categoryWithSub.getAttribute("data-category");
+          const categoryText = categoryWithSub.querySelector("span").textContent;
+          
+          // Toggle subcategory list visibility
+          const subcategoryList = categoryWithSub.closest(".category-with-sub").querySelector(".subcategory-list");
+          const toggle = categoryWithSub.querySelector(".subcategory-toggle");
+          
+          if (subcategoryList) {
+            const isExpanded = subcategoryList.classList.contains("active");
+            
+            if (isExpanded) {
+              // Close subcategories
+              subcategoryList.classList.remove("active");
+              if (toggle) toggle.classList.remove("rotated");
+            } else {
+              // Open subcategories and auto-select first one
+              subcategoryList.classList.add("active");
+              if (toggle) toggle.classList.add("rotated");
+              
+              // Auto-select and show first subcategory
+              const firstSubcategory = subcategoryList.querySelector(".subcategory-item");
+              if (firstSubcategory) {
+                // Remove active from all subcategories first
+                const allSubcategoryItems = subcategoryList.querySelectorAll(".subcategory-item");
+                allSubcategoryItems.forEach(sub => sub.classList.remove("active"));
+                
+                // Mark first as active and trigger click to show its content
+                firstSubcategory.classList.add("active");
+                
+                // Manually call the subcategory display function
+                const subcategory = firstSubcategory.getAttribute("data-subcategory");
+                const parentCategory = firstSubcategory.getAttribute("data-parent");
+                showSubcategoryProducts(parentCategory, subcategory);
+              }
+            }
+          }
+          
+          // Update active state for main category
+          categoryItems.forEach((cat) => cat.classList.remove("active"));
+          categoryWithSub.classList.add("active");
+          
+          // Update dropdown on mobile
+          if (window.innerWidth <= 1024) {
+            const selectedCategory = document.querySelector(".selected-category");
+            if (selectedCategory) {
+              selectedCategory.textContent = categoryText;
+            }
+            // Close dropdown after selection with smooth animation
+            categoryNav.classList.remove("active");
+            categoryDropdownToggle.setAttribute("aria-expanded", "false");
+            
+            // Scroll to products on mobile for better UX
+            setTimeout(() => {
+              const productsMain = document.getElementById("productsMainContent");
+              if (productsMain) {
+                productsMain.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+            }, 300);
+          }
+        });
+      }
+
+      // Show subcategory products
+      function showSubcategoryProducts(parentCategory, subcategoryKey) {
+        currentCategory = parentCategory;
+        currentSubcategory = subcategoryKey;
+        const data = productData[parentCategory];
+        
+        if (!data || !data.subcategories || !data.subcategories[subcategoryKey]) return;
+        
+        const subcategoryData = data.subcategories[subcategoryKey];
+        
+        // Update title and description
+        categoryTitle.textContent = subcategoryData.title;
+        productDescTitle.textContent = subcategoryData.title;
+        productDescText.textContent = subcategoryData.description;
+        
+        // Use parent category images
+        carouselTrack.innerHTML = "";
+        carouselIndicators.innerHTML = "";
+        
+        data.images.forEach((image, index) => {
+          const slide = document.createElement("div");
+          slide.className = "carousel-slide";
+          slide.innerHTML = `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+          carouselTrack.appendChild(slide);
+          
+          const indicator = document.createElement("button");
+          indicator.className = `carousel-indicator ${index === 0 ? "active" : ""}`;
+          indicator.setAttribute("aria-label", `Slide ${index + 1}`);
+          indicator.addEventListener("click", () => goToSlide(index));
+          carouselIndicators.appendChild(indicator);
+        });
+        
+        // Populate subcategory products
+        const productListSection = document.getElementById("productListSection");
+        productList.innerHTML = "";
+        
+        if (subcategoryData.products && subcategoryData.products.length > 0) {
+          productListSection.style.display = "block";
+          subcategoryData.products.forEach((product) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<span>${product}</span>`;
+            productList.appendChild(li);
+          });
+        } else {
+          productListSection.style.display = "none";
+        }
+
+        // Hide PDF resources for subcategories (they don't have PDFs)
+        pdfResourcesSection.style.display = "none";
+        
+        currentSlideIndex = 0;
+        updateCarousel();
+      }
+
       // Show category products in carousel
-      function showCategoryProducts(category) {
+      function showCategoryProducts(category, subcategory = null) {
         currentCategory = category;
+        currentSubcategory = null;
         const data = productData[category];
 
         if (!data) return;
@@ -819,13 +1082,54 @@
           carouselIndicators.appendChild(indicator);
         });
 
-        // Populate product list
+        // Populate product list or hide if empty
+        const productListSection = document.getElementById("productListSection");
         productList.innerHTML = "";
-        data.products.forEach((product) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<span>${product}</span>`;
-          productList.appendChild(li);
-        });
+        
+        if (data.products && data.products.length > 0) {
+          productListSection.style.display = "block";
+          data.products.forEach((product) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<span>${product}</span>`;
+            productList.appendChild(li);
+          });
+        } else {
+          // Hide the product list section if no products
+          productListSection.style.display = "none";
+        }
+
+        // Populate PDF resources or hide if empty
+        pdfResourcesList.innerHTML = "";
+        
+        if (data.pdfs && data.pdfs.length > 0) {
+          pdfResourcesSection.style.display = "block";
+          data.pdfs.forEach((pdf) => {
+            const pdfCard = document.createElement("a");
+            pdfCard.className = "pdf-resource-card";
+            pdfCard.href = pdf.url;
+            pdfCard.target = "_blank";
+            pdfCard.rel = "noopener noreferrer";
+            pdfCard.setAttribute("aria-label", `Download ${pdf.name} PDF`);
+            
+            pdfCard.innerHTML = `
+              <div class="pdf-icon">
+                <i class="${pdf.icon}"></i>
+              </div>
+              <div class="pdf-content">
+                <h5 class="pdf-title">${pdf.name}</h5>
+              </div>
+              <div class="pdf-action">
+                <i class="fas fa-external-link-alt"></i>
+                <span>View PDF</span>
+              </div>
+            `;
+            
+            pdfResourcesList.appendChild(pdfCard);
+          });
+        } else {
+          // Hide the PDF resources section if no PDFs
+          pdfResourcesSection.style.display = "none";
+        }
 
         // Reset carousel position
         currentSlideIndex = 0;
