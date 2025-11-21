@@ -1,0 +1,26 @@
+{
+  "name": "Prahil Power Enterprise",
+  "short_name": "Prahil Power",
+  "description": "Leading electrical engineering solutions provider in Ahmedabad. Specializing in transformers, switchgear, and power distribution.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d193e",
+  "theme_color": "#0071bc",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "electrical", "engineering", "industrial"],
+  "lang": "en-IN",
+  "dir": "ltr"
+}
