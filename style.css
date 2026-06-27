@@ -1297,6 +1297,165 @@ a:focus-visible {
   margin: 0;
 }
 
+/* ===================================
+   GLOBAL PRESENCE SECTION
+   =================================== */
+.global-presence-section {
+  background: var(--bg-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.global-presence-content {
+  margin-top: 2rem;
+}
+
+.global-presence-lead {
+  max-width: 850px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.global-presence-lead strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Countries Served */
+.global-countries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.global-countries-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.country-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.country-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--bg-light);
+  border: 1px solid rgba(0, 113, 188, 0.15);
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.country-chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 113, 188, 0.15);
+  border-color: rgba(0, 113, 188, 0.35);
+}
+
+.country-flag {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.country-chip-more {
+  background: var(--gradient-1);
+  color: var(--bg-white);
+  border-color: transparent;
+}
+
+.country-chip-more i {
+  font-size: 1.05rem;
+}
+
+/* Global Highlights Grid */
+.global-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.global-card {
+  background: var(--bg-white);
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(13, 25, 62, 0.07);
+  border: 1px solid rgba(0, 113, 188, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.global-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-1);
+  transform: scaleX(0);
+  transition: transform 0.35s ease;
+}
+
+.global-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 113, 188, 0.15);
+}
+
+.global-card:hover::before {
+  transform: scaleX(1);
+}
+
+.global-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  border-radius: 16px;
+  background: var(--gradient-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-white);
+  font-size: 1.6rem;
+  box-shadow: 0 5px 15px rgba(0, 113, 188, 0.25);
+  transition: all 0.3s ease;
+}
+
+.global-card:hover .global-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.global-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.65rem;
+}
+
+.global-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0;
+}
+
 /* Desktop Large */
 @media (max-width: 1024px) {
   .service-map-container {
@@ -1831,6 +1990,12 @@ a:focus-visible {
   gap: 2rem;
 }
 
+.contact-offices {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
 .contact-info {
   background: var(--bg-white);
   padding: 2rem;
@@ -1843,6 +2008,24 @@ a:focus-visible {
   color: var(--primary-dark);
   margin-bottom: 1.5rem;
   font-weight: 700;
+}
+
+.contact-info h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.contact-info h3 .office-region {
+  padding: 0.25rem 0.75rem;
+  background: var(--gradient-1);
+  color: var(--bg-white);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
 }
 
 .info-item {
@@ -3887,9 +4070,17 @@ textarea.form-control {
     gap: 1.5rem;
   }
 
+  .global-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contact-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .contact-offices {
+    grid-template-columns: 1fr 1fr;
   }
 
   .map-container {
@@ -3990,9 +4181,13 @@ textarea.form-control {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .global-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .contact-container {
-    grid-template-columns: 1fr 1.5fr;
-    gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .map-container {
